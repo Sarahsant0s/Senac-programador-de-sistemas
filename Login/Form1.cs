@@ -19,7 +19,14 @@ namespace Login
 
             if (usuário == null || usuário == "")
             {
-                labelResultado.Text = "Usuário é obrigatório!!!";
+                labelResultado.Text = " O Usuário é obrigatório!!!";
+                labelResultado.ForeColor = Color.Red;
+                return;
+            }
+
+            else if (senha == null || senha == "")
+            {
+                labelResultado.Text = "A senha é obrigatória!!!";
                 labelResultado.ForeColor = Color.Red;
                 return;
             }
@@ -35,7 +42,7 @@ namespace Login
                 labelResultado.ForeColor = Color.Red;
             }
 
-        
+
         }
 
     }

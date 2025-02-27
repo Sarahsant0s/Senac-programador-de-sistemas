@@ -113,7 +113,7 @@
             Controls.Add(textBoxUsuário);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "login";
+            Text = "login :)";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
