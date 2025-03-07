@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Login
 {
     public partial class Form1 : Form
@@ -61,7 +63,7 @@ namespace Login
         private void Cadastrar_Click(object sender, EventArgs e)
         {
             string novousuario = NovoUsuario.Text;
-            string senha = NovaSenha.Text;
+            string novasenha = this.novasenha.Text;
             bool usuarioencontrado = false;
 
             for (int i = 0; i < listaUsuarios.Count; i++) 
@@ -76,8 +78,8 @@ namespace Login
             if (usuarioencontrado == false)
             {
                 listaUsuarios.Add(novousuario);
-                listaSenhas.Add(senha);
-              labelNovoUsuario.Text = "Usuário cadastrado com sucesso!";
+                listaSenhas.Add(novasenha);
+                labelNovoUsuario.Text = "Usuário cadastrado com sucesso!";
                 labelNovoUsuario.ForeColor = Color.Green;
             }
             else
@@ -85,6 +87,21 @@ namespace Login
                 labelNovoUsuario.Text = "Já existe um usuário cadastrado!";
                 labelNovoUsuario.ForeColor = Color.Red;
             }
+            if (!Regex.IsMatch(novasenha, @"[0-9]"))
+                labelNovoUsuario.Text = "A senha deve conter pelo menos 1 número.";
+
+            if (!Regex.IsMatch(novasenha, @"[!@#$%^&*(),.?""{}|<>]"))
+                labelNovoUsuario.Text = "A senha deve conter pelo menos 1 caractere especial.";
+
+            if (!Regex.IsMatch(novasenha, @"[A-Z]"))
+                labelNovoUsuario.Text = "A senha deve conter pelo menos 1 letra maiúscula.";
+
+            if (!Regex.IsMatch(novasenha, @"[a-z]"))
+                labelNovoUsuario.Text = "A senha deve conter pelo menos 1 letra minúscula.";
+
+            if (novasenha.Contains(" "))
+                labelNovoUsuario.Text = "A senha não pode conter espaços.";
+
         }
     }
 }

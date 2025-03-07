@@ -42,7 +42,7 @@
             label6 = new Label();
             label7 = new Label();
             NovoUsuario = new TextBox();
-            NovaSenha = new TextBox();
+            novasenha = new TextBox();
             notifyIcon1 = new NotifyIcon(components);
             labelNovoUsuario = new Label();
             SuspendLayout();
@@ -163,12 +163,12 @@
             NovoUsuario.Size = new Size(147, 23);
             NovoUsuario.TabIndex = 14;
             // 
-            // NovaSenha
+            // novasenha
             // 
-            NovaSenha.Location = new Point(316, 93);
-            NovaSenha.Name = "NovaSenha";
-            NovaSenha.Size = new Size(147, 23);
-            NovaSenha.TabIndex = 15;
+            novasenha.Location = new Point(316, 93);
+            novasenha.Name = "novasenha";
+            novasenha.Size = new Size(147, 23);
+            novasenha.TabIndex = 15;
             // 
             // notifyIcon1
             // 
@@ -190,7 +190,7 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(889, 313);
             Controls.Add(labelNovoUsuario);
-            Controls.Add(NovaSenha);
+            Controls.Add(novasenha);
             Controls.Add(NovoUsuario);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -227,7 +227,7 @@
         private Label label6;
         private Label label7;
         private TextBox NovoUsuario;
-        private TextBox NovaSenha;
+        private TextBox novasenha;
         private NotifyIcon notifyIcon1;
         private Label labelNovoUsuario;
     }
