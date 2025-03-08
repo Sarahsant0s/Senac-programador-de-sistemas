@@ -36,13 +36,13 @@
             label3 = new Label();
             buttonEntrar = new Button();
             labelResultado = new Label();
-            Cadastrar = new Button();
+            buttonCadastrar = new Button();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             NovoUsuario = new TextBox();
-            novasenha = new TextBox();
+            novaSenha = new TextBox();
             notifyIcon1 = new NotifyIcon(components);
             labelNovoUsuario = new Label();
             SuspendLayout();
@@ -108,15 +108,14 @@
             labelResultado.Size = new Size(0, 15);
             labelResultado.TabIndex = 6;
             // 
-            // Cadastrar
+            // buttonCadastrar
             // 
-            Cadastrar.Location = new Point(355, 128);
-            Cadastrar.Name = "Cadastrar";
-            Cadastrar.Size = new Size(75, 23);
-            Cadastrar.TabIndex = 7;
-            Cadastrar.Text = "Cadastrar";
-            Cadastrar.UseVisualStyleBackColor = true;
-            Cadastrar.Click += Cadastrar_Click;
+            buttonCadastrar.Location = new Point(355, 128);
+            buttonCadastrar.Name = "buttonCadastrar";
+            buttonCadastrar.Size = new Size(75, 23);
+            buttonCadastrar.TabIndex = 7;
+            buttonCadastrar.Text = "Cadastrar";
+            buttonCadastrar.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -163,12 +162,12 @@
             NovoUsuario.Size = new Size(147, 23);
             NovoUsuario.TabIndex = 14;
             // 
-            // novasenha
+            // novaSenha
             // 
-            novasenha.Location = new Point(316, 93);
-            novasenha.Name = "novasenha";
-            novasenha.Size = new Size(147, 23);
-            novasenha.TabIndex = 15;
+            novaSenha.Location = new Point(316, 93);
+            novaSenha.Name = "novaSenha";
+            novaSenha.Size = new Size(147, 23);
+            novaSenha.TabIndex = 15;
             // 
             // notifyIcon1
             // 
@@ -190,13 +189,13 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(889, 313);
             Controls.Add(labelNovoUsuario);
-            Controls.Add(novasenha);
+            Controls.Add(novaSenha);
             Controls.Add(NovoUsuario);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(Cadastrar);
+            Controls.Add(buttonCadastrar);
             Controls.Add(labelResultado);
             Controls.Add(buttonEntrar);
             Controls.Add(label3);
@@ -221,13 +220,13 @@
         private Label label3;
         private Button buttonEntrar;
         private Label labelResultado;
-        private Button Cadastrar;
+        private Button buttonCadastrar;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
         private TextBox NovoUsuario;
-        private TextBox novasenha;
+        private TextBox novaSenha;
         private NotifyIcon notifyIcon1;
         private Label labelNovoUsuario;
     }
