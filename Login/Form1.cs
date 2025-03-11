@@ -1,14 +1,27 @@
+using System.ComponentModel.DataAnnotations;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 
 namespace Login
 {
     public partial class Form1 : Form
     {
-        List<string> listaUsuarios = new List<string>() { "neymar.jr", "pablo vittar", "sukuna.silva" };
-        List<string> listaSenhas = new List<string>() { "Bruna", "12345", "777" };
+        List<string> listaUsuarios = new List<string>() { "neymar.jr", "pablo vitar", "sukuna.silva" };
+        List<string> listaSenhas = new List<string>() { "Bruna@123", "12345Abc", "Sete7Sete" };
+
+        Usuario neymar = new Usuario() { Email = "neymar.jr@email.com", Senha = "Bruna@123" };
+        Usuario pablo = new Usuario() { Email = "pablo.vitar2email.com", Senha = "12345Abc" };
+        Usuario sukuna = new Usuario() { Email = "sukuna.silva@email.com", Senha = "Sete7Sete" };
+
+        List<Usuario> usuario = new List<Usuario>();
+
+
         public Form1()
         {
             InitializeComponent();
+            usuario.Add(neymar);
+            usuario.Add(pablo);
+            usuario.Add(sukuna);
         }
 
         private void Form1_Load(object sender, EventArgs e)
