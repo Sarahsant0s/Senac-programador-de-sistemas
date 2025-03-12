@@ -30,39 +30,29 @@
         {
             textboxValor1 = new TextBox();
             textboxValor2 = new TextBox();
-            buttonCalcular = new Button();
             labelTitulo = new Label();
-            buttonmenos = new Button();
-            buttonmult = new Button();
-            buttondivi = new Button();
             labelResultado = new Label();
             label1 = new Label();
-            labelValor = new Label();
+            buttonresultado = new Button();
+            comboBox1 = new ComboBox();
+            textboxValor = new TextBox();
+            labelsinal = new Label();
+            buttonnovoform = new Button();
             SuspendLayout();
             // 
             // textboxValor1
             // 
-            textboxValor1.Location = new Point(41, 73);
+            textboxValor1.Location = new Point(90, 89);
             textboxValor1.Name = "textboxValor1";
-            textboxValor1.Size = new Size(100, 23);
+            textboxValor1.Size = new Size(59, 23);
             textboxValor1.TabIndex = 0;
             // 
             // textboxValor2
             // 
-            textboxValor2.Location = new Point(211, 73);
+            textboxValor2.Location = new Point(194, 89);
             textboxValor2.Name = "textboxValor2";
-            textboxValor2.Size = new Size(100, 23);
+            textboxValor2.Size = new Size(57, 23);
             textboxValor2.TabIndex = 1;
-            // 
-            // buttonCalcular
-            // 
-            buttonCalcular.Location = new Point(179, 121);
-            buttonCalcular.Name = "buttonCalcular";
-            buttonCalcular.Size = new Size(28, 27);
-            buttonCalcular.TabIndex = 2;
-            buttonCalcular.Text = "+";
-            buttonCalcular.UseVisualStyleBackColor = true;
-            buttonCalcular.Click += buttonCalcular_Click;
             // 
             // labelTitulo
             // 
@@ -74,41 +64,11 @@
             labelTitulo.TabIndex = 3;
             labelTitulo.Text = "Calculadora";
             // 
-            // buttonmenos
-            // 
-            buttonmenos.Location = new Point(143, 154);
-            buttonmenos.Name = "buttonmenos";
-            buttonmenos.Size = new Size(30, 28);
-            buttonmenos.TabIndex = 4;
-            buttonmenos.Text = "-";
-            buttonmenos.UseVisualStyleBackColor = true;
-            buttonmenos.Click += buttonmenos_Click;
-            // 
-            // buttonmult
-            // 
-            buttonmult.Location = new Point(179, 154);
-            buttonmult.Name = "buttonmult";
-            buttonmult.Size = new Size(28, 28);
-            buttonmult.TabIndex = 5;
-            buttonmult.Text = "*";
-            buttonmult.UseVisualStyleBackColor = true;
-            buttonmult.Click += buttonmult_Click;
-            // 
-            // buttondivi
-            // 
-            buttondivi.Location = new Point(143, 121);
-            buttondivi.Name = "buttondivi";
-            buttondivi.Size = new Size(30, 27);
-            buttondivi.TabIndex = 6;
-            buttondivi.Text = "/";
-            buttondivi.UseVisualStyleBackColor = true;
-            buttondivi.Click += buttondivi_Click;
-            // 
             // labelResultado
             // 
             labelResultado.AutoSize = true;
             labelResultado.Font = new Font("Copperplate Gothic Light", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelResultado.Location = new Point(41, 38);
+            labelResultado.Location = new Point(73, 46);
             labelResultado.Name = "labelResultado";
             labelResultado.Size = new Size(274, 12);
             labelResultado.TabIndex = 7;
@@ -117,37 +77,78 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(326, 77);
+            label1.Location = new Point(259, 92);
             label1.Name = "label1";
             label1.Size = new Size(15, 15);
             label1.TabIndex = 8;
             label1.Text = "=";
             // 
-            // labelValor
+            // buttonresultado
             // 
-            labelValor.AutoSize = true;
-            labelValor.Location = new Point(347, 77);
-            labelValor.Name = "labelValor";
-            labelValor.Size = new Size(0, 15);
-            labelValor.TabIndex = 9;
+            buttonresultado.Location = new Point(137, 147);
+            buttonresultado.Name = "buttonresultado";
+            buttonresultado.Size = new Size(78, 23);
+            buttonresultado.TabIndex = 16;
+            buttonresultado.Text = "Calcular";
+            buttonresultado.UseVisualStyleBackColor = true;
+            buttonresultado.Click += buttonresultado_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Somar", "Subtrair", "Dividir", "Multiplicar" });
+            comboBox1.Location = new Point(112, 118);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(133, 23);
+            comboBox1.TabIndex = 17;
+            comboBox1.Text = "Selecione a operação";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // textboxValor
+            // 
+            textboxValor.BackColor = SystemColors.ControlLight;
+            textboxValor.Enabled = false;
+            textboxValor.Location = new Point(280, 89);
+            textboxValor.Name = "textboxValor";
+            textboxValor.ReadOnly = true;
+            textboxValor.Size = new Size(56, 23);
+            textboxValor.TabIndex = 18;
+            // 
+            // labelsinal
+            // 
+            labelsinal.AutoSize = true;
+            labelsinal.Location = new Point(166, 92);
+            labelsinal.Name = "labelsinal";
+            labelsinal.Size = new Size(0, 15);
+            labelsinal.TabIndex = 19;
+            // 
+            // buttonnovoform
+            // 
+            buttonnovoform.Location = new Point(140, 237);
+            buttonnovoform.Name = "buttonnovoform";
+            buttonnovoform.Size = new Size(89, 21);
+            buttonnovoform.TabIndex = 20;
+            buttonnovoform.Text = "Novo Form";
+            buttonnovoform.UseVisualStyleBackColor = true;
+            buttonnovoform.Click += buttonnovoform_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelValor);
+            Controls.Add(buttonnovoform);
+            Controls.Add(labelsinal);
+            Controls.Add(textboxValor);
+            Controls.Add(comboBox1);
+            Controls.Add(buttonresultado);
             Controls.Add(label1);
             Controls.Add(labelResultado);
-            Controls.Add(buttondivi);
-            Controls.Add(buttonmult);
-            Controls.Add(buttonmenos);
             Controls.Add(labelTitulo);
-            Controls.Add(buttonCalcular);
             Controls.Add(textboxValor2);
             Controls.Add(textboxValor1);
             Name = "Form1";
-            Text = "Form1";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,13 +157,13 @@
 
         private TextBox textboxValor1;
         private TextBox textboxValor2;
-        private Button buttonCalcular;
         private Label labelTitulo;
-        private Button buttonmenos;
-        private Button buttonmult;
-        private Button buttondivi;
         private Label labelResultado;
         private Label label1;
-        private Label labelValor;
+        private Button buttonresultado;
+        private ComboBox comboBox1;
+        private TextBox textboxValor;
+        private Label labelsinal;
+        private Button buttonnovoform;
     }
 }
