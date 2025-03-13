@@ -58,7 +58,7 @@
             // 
             labelTitulo.AutoSize = true;
             labelTitulo.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(112, 9);
+            labelTitulo.Location = new Point(109, 28);
             labelTitulo.Name = "labelTitulo";
             labelTitulo.Size = new Size(117, 19);
             labelTitulo.TabIndex = 3;
@@ -67,17 +67,17 @@
             // labelResultado
             // 
             labelResultado.AutoSize = true;
-            labelResultado.Font = new Font("Copperplate Gothic Light", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelResultado.Location = new Point(73, 46);
+            labelResultado.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelResultado.Location = new Point(90, 60);
             labelResultado.Name = "labelResultado";
-            labelResultado.Size = new Size(274, 12);
+            labelResultado.Size = new Size(214, 16);
             labelResultado.TabIndex = 7;
             labelResultado.Text = "Insira os valores para executar o cáculo:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(259, 92);
+            label1.Location = new Point(257, 92);
             label1.Name = "label1";
             label1.Size = new Size(15, 15);
             label1.TabIndex = 8;
@@ -97,9 +97,9 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Somar", "Subtrair", "Dividir", "Multiplicar" });
-            comboBox1.Location = new Point(112, 118);
+            comboBox1.Location = new Point(99, 118);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
+            comboBox1.Size = new Size(146, 23);
             comboBox1.TabIndex = 17;
             comboBox1.Text = "Selecione a operação";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -108,7 +108,7 @@
             // 
             textboxValor.BackColor = SystemColors.ControlLight;
             textboxValor.Enabled = false;
-            textboxValor.Location = new Point(280, 89);
+            textboxValor.Location = new Point(278, 89);
             textboxValor.Name = "textboxValor";
             textboxValor.ReadOnly = true;
             textboxValor.Size = new Size(56, 23);
@@ -124,9 +124,9 @@
             // 
             // buttonnovoform
             // 
-            buttonnovoform.Location = new Point(140, 237);
+            buttonnovoform.Location = new Point(137, 282);
             buttonnovoform.Name = "buttonnovoform";
-            buttonnovoform.Size = new Size(89, 21);
+            buttonnovoform.Size = new Size(89, 30);
             buttonnovoform.TabIndex = 20;
             buttonnovoform.Text = "Novo Form";
             buttonnovoform.UseVisualStyleBackColor = true;
