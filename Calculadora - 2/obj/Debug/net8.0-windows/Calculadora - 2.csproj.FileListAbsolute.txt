@@ -16,4 +16,5 @@ D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Deb
 D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\Calculadora - 2.genruntimeconfig.cache
 D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\ref\Calculadora - 2.dll
 D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\Calculadora___2.Properties.Resources.resources
-D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\Calculadora___2.Novo_Form.resources
+D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\Calculadora___2.Form2.resources
+D:\Programador de sistemas\Senac-programador-de-sistemas\Calculadora - 2\obj\Debug\net8.0-windows\Calculadora___2.radioButtonCompri.resources

@@ -202,7 +202,7 @@ namespace Calculadora___2
 
         private void buttonnovoform_Click(object sender, EventArgs e)
         {
-            Novo_Form novoForm = new Novo_Form();
+            radioButtonCompri novoForm = new radioButtonCompri();
             novoForm.Show();
 
             this.Hide();
