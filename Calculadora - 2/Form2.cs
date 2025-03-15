@@ -16,5 +16,7 @@ namespace Calculadora___2
         {
             InitializeComponent();
         }
+
+        
     }
 }
