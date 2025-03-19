@@ -1,0 +1,17 @@
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\bin\Debug\net8.0-windows\Cadastro Cliente.exe
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\bin\Debug\net8.0-windows\Cadastro Cliente.deps.json
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\bin\Debug\net8.0-windows\Cadastro Cliente.runtimeconfig.json
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\bin\Debug\net8.0-windows\Cadastro Cliente.dll
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\bin\Debug\net8.0-windows\Cadastro Cliente.pdb
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro_Cliente.Form1.resources
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.csproj.GenerateResource.cache
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.AssemblyInfoInputs.cache
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.AssemblyInfo.cs
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.csproj.CoreCompileInputs.cache
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.sourcelink.json
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.dll
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\refint\Cadastro Cliente.dll
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.pdb
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\Cadastro Cliente.genruntimeconfig.cache
+D:\Programador de sistemas\Senac-programador-de-sistemas\Cadastro Cliente\obj\Debug\net8.0-windows\ref\Cadastro Cliente.dll
