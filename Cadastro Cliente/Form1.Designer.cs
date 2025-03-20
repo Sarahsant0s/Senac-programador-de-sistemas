@@ -33,12 +33,12 @@
             maskedTextBoxnascimento = new MaskedTextBox();
             maskedTextBoxtelefone = new MaskedTextBox();
             textBoxemail = new TextBox();
-            comboBoxgenero = new ComboBox();
+            comboBoxGenero = new ComboBox();
             textBoxnomesocial = new TextBox();
-            comboBoxetnia = new ComboBox();
+            comboBoxEtnia = new ComboBox();
             checkBoxsim = new CheckBox();
-            radioButtonPF = new RadioButton();
             radioButtonPJ = new RadioButton();
+            radioButtonPF = new RadioButton();
             checkBoxTermo = new CheckBox();
             labelNome = new Label();
             labelNascimento = new Label();
@@ -48,7 +48,6 @@
             labelnomesocial = new Label();
             labelEtinia = new Label();
             labelEstrangeiro = new Label();
-            checkBoxnão = new CheckBox();
             labelPFPJ = new Label();
             labelEndereco = new Label();
             textBoxLogradouro = new TextBox();
@@ -57,7 +56,7 @@
             textBoxbairro = new TextBox();
             textBoxmunicipio = new TextBox();
             comboBoxestado = new ComboBox();
-            maskedTextBox1 = new MaskedTextBox();
+            maskedTextBoxCep = new MaskedTextBox();
             label2 = new Label();
             labelnumero = new Label();
             label1 = new Label();
@@ -65,7 +64,9 @@
             labelmunicipio = new Label();
             labelcep = new Label();
             labelestado = new Label();
-            button1 = new Button();
+            buttonCadastrar = new Button();
+            labelErro = new Label();
+            labelResultado = new Label();
             SuspendLayout();
             // 
             // labelinformações
@@ -109,14 +110,14 @@
             textBoxemail.Size = new Size(100, 23);
             textBoxemail.TabIndex = 4;
             // 
-            // comboBoxgenero
+            // comboBoxGenero
             // 
-            comboBoxgenero.FormattingEnabled = true;
-            comboBoxgenero.Items.AddRange(new object[] { "Masculino", "Feminino ", "Não binário", "Prefiro não opinar" });
-            comboBoxgenero.Location = new Point(36, 343);
-            comboBoxgenero.Name = "comboBoxgenero";
-            comboBoxgenero.Size = new Size(100, 23);
-            comboBoxgenero.TabIndex = 5;
+            comboBoxGenero.FormattingEnabled = true;
+            comboBoxGenero.Items.AddRange(new object[] { "Masculino", "Feminino ", "Não binário", "Prefiro não opinar" });
+            comboBoxGenero.Location = new Point(36, 343);
+            comboBoxGenero.Name = "comboBoxGenero";
+            comboBoxGenero.Size = new Size(100, 23);
+            comboBoxGenero.TabIndex = 5;
             // 
             // textBoxnomesocial
             // 
@@ -125,14 +126,14 @@
             textBoxnomesocial.Size = new Size(100, 23);
             textBoxnomesocial.TabIndex = 6;
             // 
-            // comboBoxetnia
+            // comboBoxEtnia
             // 
-            comboBoxetnia.FormattingEnabled = true;
-            comboBoxetnia.Items.AddRange(new object[] { "Branco", "Amarelo", "Pardo", "Negro", "Indígena" });
-            comboBoxetnia.Location = new Point(36, 404);
-            comboBoxetnia.Name = "comboBoxetnia";
-            comboBoxetnia.Size = new Size(100, 23);
-            comboBoxetnia.TabIndex = 7;
+            comboBoxEtnia.FormattingEnabled = true;
+            comboBoxEtnia.Items.AddRange(new object[] { "Branco", "Amarelo", "Pardo", "Negro", "Indígena" });
+            comboBoxEtnia.Location = new Point(36, 404);
+            comboBoxEtnia.Name = "comboBoxEtnia";
+            comboBoxEtnia.Size = new Size(100, 23);
+            comboBoxEtnia.TabIndex = 7;
             // 
             // checkBoxsim
             // 
@@ -145,35 +146,35 @@
             checkBoxsim.Text = "Sim";
             checkBoxsim.UseVisualStyleBackColor = true;
             // 
-            // radioButtonPF
-            // 
-            radioButtonPF.AutoSize = true;
-            radioButtonPF.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPF.Location = new Point(36, 579);
-            radioButtonPF.Name = "radioButtonPF";
-            radioButtonPF.Size = new Size(115, 21);
-            radioButtonPF.TabIndex = 9;
-            radioButtonPF.TabStop = true;
-            radioButtonPF.Text = "Pessoa Jurídica";
-            radioButtonPF.UseVisualStyleBackColor = true;
-            // 
             // radioButtonPJ
             // 
             radioButtonPJ.AutoSize = true;
             radioButtonPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPJ.Location = new Point(36, 558);
+            radioButtonPJ.Location = new Point(36, 551);
             radioButtonPJ.Name = "radioButtonPJ";
-            radioButtonPJ.Size = new Size(102, 21);
-            radioButtonPJ.TabIndex = 10;
+            radioButtonPJ.Size = new Size(115, 21);
+            radioButtonPJ.TabIndex = 9;
             radioButtonPJ.TabStop = true;
-            radioButtonPJ.Text = "Pessoa Física";
+            radioButtonPJ.Text = "Pessoa Jurídica";
             radioButtonPJ.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPF
+            // 
+            radioButtonPF.AutoSize = true;
+            radioButtonPF.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            radioButtonPF.Location = new Point(36, 530);
+            radioButtonPF.Name = "radioButtonPF";
+            radioButtonPF.Size = new Size(102, 21);
+            radioButtonPF.TabIndex = 10;
+            radioButtonPF.TabStop = true;
+            radioButtonPF.Text = "Pessoa Física";
+            radioButtonPF.UseVisualStyleBackColor = true;
             // 
             // checkBoxTermo
             // 
             checkBoxTermo.AutoSize = true;
             checkBoxTermo.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxTermo.Location = new Point(33, 615);
+            checkBoxTermo.Location = new Point(33, 587);
             checkBoxTermo.Name = "checkBoxTermo";
             checkBoxTermo.Size = new Size(379, 21);
             checkBoxTermo.TabIndex = 11;
@@ -259,22 +260,11 @@
             labelEstrangeiro.TabIndex = 19;
             labelEstrangeiro.Text = "Estrangeiro(a)?";
             // 
-            // checkBoxnão
-            // 
-            checkBoxnão.AutoSize = true;
-            checkBoxnão.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxnão.Location = new Point(36, 496);
-            checkBoxnão.Name = "checkBoxnão";
-            checkBoxnão.Size = new Size(52, 21);
-            checkBoxnão.TabIndex = 20;
-            checkBoxnão.Text = "Não";
-            checkBoxnão.UseVisualStyleBackColor = true;
-            // 
             // labelPFPJ
             // 
             labelPFPJ.AutoSize = true;
             labelPFPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPFPJ.Location = new Point(33, 540);
+            labelPFPJ.Location = new Point(33, 512);
             labelPFPJ.Name = "labelPFPJ";
             labelPFPJ.Size = new Size(86, 17);
             labelPFPJ.TabIndex = 21;
@@ -284,7 +274,7 @@
             // 
             labelEndereco.AutoSize = true;
             labelEndereco.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelEndereco.Location = new Point(595, 9);
+            labelEndereco.Location = new Point(405, 9);
             labelEndereco.Name = "labelEndereco";
             labelEndereco.Size = new Size(100, 25);
             labelEndereco.TabIndex = 22;
@@ -292,14 +282,14 @@
             // 
             // textBoxLogradouro
             // 
-            textBoxLogradouro.Location = new Point(595, 64);
+            textBoxLogradouro.Location = new Point(405, 62);
             textBoxLogradouro.Name = "textBoxLogradouro";
             textBoxLogradouro.Size = new Size(178, 23);
             textBoxLogradouro.TabIndex = 23;
             // 
             // textBoxnumero
             // 
-            textBoxnumero.Location = new Point(595, 118);
+            textBoxnumero.Location = new Point(405, 118);
             textBoxnumero.Name = "textBoxnumero";
             textBoxnumero.Size = new Size(81, 23);
             textBoxnumero.TabIndex = 24;
@@ -307,21 +297,21 @@
             // textBoxcomplemento
             // 
             textBoxcomplemento.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxcomplemento.Location = new Point(595, 175);
+            textBoxcomplemento.Location = new Point(405, 175);
             textBoxcomplemento.Name = "textBoxcomplemento";
             textBoxcomplemento.Size = new Size(178, 25);
             textBoxcomplemento.TabIndex = 25;
             // 
             // textBoxbairro
             // 
-            textBoxbairro.Location = new Point(595, 231);
+            textBoxbairro.Location = new Point(405, 231);
             textBoxbairro.Name = "textBoxbairro";
             textBoxbairro.Size = new Size(178, 23);
             textBoxbairro.TabIndex = 26;
             // 
             // textBoxmunicipio
             // 
-            textBoxmunicipio.Location = new Point(595, 291);
+            textBoxmunicipio.Location = new Point(405, 291);
             textBoxmunicipio.Name = "textBoxmunicipio";
             textBoxmunicipio.Size = new Size(81, 23);
             textBoxmunicipio.TabIndex = 27;
@@ -330,24 +320,24 @@
             // 
             comboBoxestado.FormattingEnabled = true;
             comboBoxestado.Items.AddRange(new object[] { "Acre – AC;", "Alagoas – AL;", "Amapá – AP;", "Amazonas – AM;", "Bahia – BA;", "Ceará – CE;", "Distrito Federal – DF;", "Espírito Santo – ES;", "Goiás – GO;", "Maranhão – MA;", "Mato Grosso – MT;", "Mato Grosso do Sul – MS;", "Minas Gerais – MG;", "Pará – PA;", "Paraíba – PB;", "Paraná – PR;", "Pernambuco – PE;", "Piauí – PI;", "Rio de Janeiro – RJ;", "Rio Grande do Norte – RN;", "Rio Grande do Sul – RS;", "Rondônia – RO;", "Roraima – RR;", "Santa Catarina – SC;", "São Paulo – SP;", "Sergipe – SE;", "Tocantins – TO." });
-            comboBoxestado.Location = new Point(595, 343);
+            comboBoxestado.Location = new Point(405, 343);
             comboBoxestado.Name = "comboBoxestado";
-            comboBoxestado.Size = new Size(81, 23);
+            comboBoxestado.Size = new Size(178, 23);
             comboBoxestado.TabIndex = 28;
             // 
-            // maskedTextBox1
+            // maskedTextBoxCep
             // 
-            maskedTextBox1.Location = new Point(595, 404);
-            maskedTextBox1.Mask = "    00000-999";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(81, 23);
-            maskedTextBox1.TabIndex = 29;
+            maskedTextBoxCep.Location = new Point(405, 404);
+            maskedTextBoxCep.Mask = "   00000-999";
+            maskedTextBoxCep.Name = "maskedTextBoxCep";
+            maskedTextBoxCep.Size = new Size(81, 23);
+            maskedTextBoxCep.TabIndex = 29;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(595, 46);
+            label2.Location = new Point(405, 44);
             label2.Name = "label2";
             label2.Size = new Size(81, 17);
             label2.TabIndex = 30;
@@ -357,7 +347,7 @@
             // 
             labelnumero.AutoSize = true;
             labelnumero.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelnumero.Location = new Point(595, 100);
+            labelnumero.Location = new Point(405, 98);
             labelnumero.Name = "labelnumero";
             labelnumero.Size = new Size(59, 17);
             labelnumero.TabIndex = 31;
@@ -367,7 +357,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(595, 155);
+            label1.Location = new Point(405, 155);
             label1.Name = "label1";
             label1.Size = new Size(93, 17);
             label1.TabIndex = 32;
@@ -377,7 +367,7 @@
             // 
             labelbairro.AutoSize = true;
             labelbairro.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelbairro.Location = new Point(595, 211);
+            labelbairro.Location = new Point(405, 211);
             labelbairro.Name = "labelbairro";
             labelbairro.Size = new Size(46, 17);
             labelbairro.TabIndex = 33;
@@ -387,7 +377,7 @@
             // 
             labelmunicipio.AutoSize = true;
             labelmunicipio.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelmunicipio.Location = new Point(595, 271);
+            labelmunicipio.Location = new Point(405, 271);
             labelmunicipio.Name = "labelmunicipio";
             labelmunicipio.Size = new Size(68, 17);
             labelmunicipio.TabIndex = 34;
@@ -397,7 +387,7 @@
             // 
             labelcep.AutoSize = true;
             labelcep.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelcep.Location = new Point(595, 384);
+            labelcep.Location = new Point(405, 384);
             labelcep.Name = "labelcep";
             labelcep.Size = new Size(36, 17);
             labelcep.TabIndex = 35;
@@ -407,28 +397,46 @@
             // 
             labelestado.AutoSize = true;
             labelestado.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelestado.Location = new Point(595, 323);
+            labelestado.Location = new Point(405, 324);
             labelestado.Name = "labelestado";
             labelestado.Size = new Size(51, 17);
             labelestado.TabIndex = 36;
             labelestado.Text = "Estado:";
             // 
-            // button1
+            // buttonCadastrar
             // 
-            button1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(601, 469);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 23);
-            button1.TabIndex = 37;
-            button1.Text = "Cadastrar";
-            button1.UseVisualStyleBackColor = true;
+            buttonCadastrar.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonCadastrar.Location = new Point(405, 448);
+            buttonCadastrar.Name = "buttonCadastrar";
+            buttonCadastrar.Size = new Size(94, 23);
+            buttonCadastrar.TabIndex = 37;
+            buttonCadastrar.Text = "Cadastrar";
+            buttonCadastrar.UseVisualStyleBackColor = true;
+            // 
+            // labelErro
+            // 
+            labelErro.AutoSize = true;
+            labelErro.Location = new Point(36, 609);
+            labelErro.Name = "labelErro";
+            labelErro.Size = new Size(0, 15);
+            labelErro.TabIndex = 38;
+            // 
+            // labelResultado
+            // 
+            labelResultado.AutoSize = true;
+            labelResultado.Location = new Point(405, 474);
+            labelResultado.Name = "labelResultado";
+            labelResultado.Size = new Size(0, 15);
+            labelResultado.TabIndex = 39;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 661);
-            Controls.Add(button1);
+            ClientSize = new Size(1125, 712);
+            Controls.Add(labelResultado);
+            Controls.Add(labelErro);
+            Controls.Add(buttonCadastrar);
             Controls.Add(labelestado);
             Controls.Add(labelcep);
             Controls.Add(labelmunicipio);
@@ -436,7 +444,7 @@
             Controls.Add(label1);
             Controls.Add(labelnumero);
             Controls.Add(label2);
-            Controls.Add(maskedTextBox1);
+            Controls.Add(maskedTextBoxCep);
             Controls.Add(comboBoxestado);
             Controls.Add(textBoxmunicipio);
             Controls.Add(textBoxbairro);
@@ -445,7 +453,6 @@
             Controls.Add(textBoxLogradouro);
             Controls.Add(labelEndereco);
             Controls.Add(labelPFPJ);
-            Controls.Add(checkBoxnão);
             Controls.Add(labelEstrangeiro);
             Controls.Add(labelEtinia);
             Controls.Add(labelnomesocial);
@@ -455,12 +462,12 @@
             Controls.Add(labelNascimento);
             Controls.Add(labelNome);
             Controls.Add(checkBoxTermo);
-            Controls.Add(radioButtonPJ);
             Controls.Add(radioButtonPF);
+            Controls.Add(radioButtonPJ);
             Controls.Add(checkBoxsim);
-            Controls.Add(comboBoxetnia);
+            Controls.Add(comboBoxEtnia);
             Controls.Add(textBoxnomesocial);
-            Controls.Add(comboBoxgenero);
+            Controls.Add(comboBoxGenero);
             Controls.Add(textBoxemail);
             Controls.Add(maskedTextBoxtelefone);
             Controls.Add(maskedTextBoxnascimento);
@@ -478,12 +485,12 @@
         private MaskedTextBox maskedTextBoxnascimento;
         private MaskedTextBox maskedTextBoxtelefone;
         private TextBox textBoxemail;
-        private ComboBox comboBoxgenero;
+        private ComboBox comboBoxGenero;
         private TextBox textBoxnomesocial;
-        private ComboBox comboBoxetnia;
+        private ComboBox comboBoxEtnia;
         private CheckBox checkBoxsim;
-        private RadioButton radioButtonPF;
         private RadioButton radioButtonPJ;
+        private RadioButton radioButtonPF;
         private CheckBox checkBoxTermo;
         private Label labelNome;
         private Label labelNascimento;
@@ -493,7 +500,6 @@
         private Label labelnomesocial;
         private Label labelEtinia;
         private Label labelEstrangeiro;
-        private CheckBox checkBoxnão;
         private Label labelPFPJ;
         private Label labelEndereco;
         private TextBox textBoxLogradouro;
@@ -502,7 +508,7 @@
         private TextBox textBoxbairro;
         private TextBox textBoxmunicipio;
         private ComboBox comboBoxestado;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxCep;
         private Label label2;
         private Label labelnumero;
         private Label label1;
@@ -510,6 +516,8 @@
         private Label labelmunicipio;
         private Label labelcep;
         private Label labelestado;
-        private Button button1;
+        private Button buttonCadastrar;
+        private Label labelErro;
+        private Label labelResultado;
     }
 }
