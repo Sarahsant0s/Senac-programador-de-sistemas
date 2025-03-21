@@ -67,6 +67,9 @@
             buttonCadastrar = new Button();
             labelErro = new Label();
             labelResultado = new Label();
+            dataGridViewClientes = new DataGridView();
+            checkBoxnao = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             SuspendLayout();
             // 
             // labelinformações
@@ -150,7 +153,7 @@
             // 
             radioButtonPJ.AutoSize = true;
             radioButtonPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPJ.Location = new Point(36, 551);
+            radioButtonPJ.Location = new Point(39, 567);
             radioButtonPJ.Name = "radioButtonPJ";
             radioButtonPJ.Size = new Size(115, 21);
             radioButtonPJ.TabIndex = 9;
@@ -162,7 +165,7 @@
             // 
             radioButtonPF.AutoSize = true;
             radioButtonPF.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPF.Location = new Point(36, 530);
+            radioButtonPF.Location = new Point(39, 546);
             radioButtonPF.Name = "radioButtonPF";
             radioButtonPF.Size = new Size(102, 21);
             radioButtonPF.TabIndex = 10;
@@ -174,7 +177,7 @@
             // 
             checkBoxTermo.AutoSize = true;
             checkBoxTermo.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxTermo.Location = new Point(33, 587);
+            checkBoxTermo.Location = new Point(36, 603);
             checkBoxTermo.Name = "checkBoxTermo";
             checkBoxTermo.Size = new Size(379, 21);
             checkBoxTermo.TabIndex = 11;
@@ -187,9 +190,9 @@
             labelNome.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelNome.Location = new Point(36, 44);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(47, 17);
+            labelNome.Size = new Size(56, 17);
             labelNome.TabIndex = 12;
-            labelNome.Text = "Nome:";
+            labelNome.Text = "* Nome:";
             // 
             // labelNascimento
             // 
@@ -197,9 +200,9 @@
             labelNascimento.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelNascimento.Location = new Point(34, 155);
             labelNascimento.Name = "labelNascimento";
-            labelNascimento.Size = new Size(130, 17);
+            labelNascimento.Size = new Size(139, 17);
             labelNascimento.TabIndex = 13;
-            labelNascimento.Text = "Data de Nascimento:";
+            labelNascimento.Text = "* Data de Nascimento:";
             // 
             // labelCel
             // 
@@ -207,9 +210,9 @@
             labelCel.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelCel.Location = new Point(36, 213);
             labelCel.Name = "labelCel";
-            labelCel.Size = new Size(47, 15);
+            labelCel.Size = new Size(55, 15);
             labelCel.TabIndex = 14;
-            labelCel.Text = "Celular:";
+            labelCel.Text = "* Celular:";
             // 
             // labelGenero
             // 
@@ -217,9 +220,9 @@
             labelGenero.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelGenero.Location = new Point(34, 324);
             labelGenero.Name = "labelGenero";
-            labelGenero.Size = new Size(54, 17);
+            labelGenero.Size = new Size(63, 17);
             labelGenero.TabIndex = 15;
-            labelGenero.Text = "Gênero:";
+            labelGenero.Text = "* Gênero:";
             // 
             // labelEmail
             // 
@@ -227,9 +230,9 @@
             labelEmail.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEmail.Location = new Point(36, 271);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(42, 17);
+            labelEmail.Size = new Size(51, 17);
             labelEmail.TabIndex = 16;
-            labelEmail.Text = "Email:";
+            labelEmail.Text = "* Email:";
             // 
             // labelnomesocial
             // 
@@ -246,9 +249,9 @@
             labelEtinia.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEtinia.Location = new Point(36, 384);
             labelEtinia.Name = "labelEtinia";
-            labelEtinia.Size = new Size(39, 17);
+            labelEtinia.Size = new Size(48, 17);
             labelEtinia.TabIndex = 18;
-            labelEtinia.Text = "Etnia:";
+            labelEtinia.Text = "* Etnia:";
             // 
             // labelEstrangeiro
             // 
@@ -256,19 +259,19 @@
             labelEstrangeiro.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEstrangeiro.Location = new Point(33, 451);
             labelEstrangeiro.Name = "labelEstrangeiro";
-            labelEstrangeiro.Size = new Size(96, 17);
+            labelEstrangeiro.Size = new Size(105, 17);
             labelEstrangeiro.TabIndex = 19;
-            labelEstrangeiro.Text = "Estrangeiro(a)?";
+            labelEstrangeiro.Text = "* Estrangeiro(a)?";
             // 
             // labelPFPJ
             // 
             labelPFPJ.AutoSize = true;
             labelPFPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPFPJ.Location = new Point(33, 512);
+            labelPFPJ.Location = new Point(36, 528);
             labelPFPJ.Name = "labelPFPJ";
-            labelPFPJ.Size = new Size(86, 17);
+            labelPFPJ.Size = new Size(108, 17);
             labelPFPJ.TabIndex = 21;
-            labelPFPJ.Text = "Você é uma...";
+            labelPFPJ.Text = "* Tipo de Cliente:";
             // 
             // labelEndereco
             // 
@@ -339,9 +342,9 @@
             label2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(405, 44);
             label2.Name = "label2";
-            label2.Size = new Size(81, 17);
+            label2.Size = new Size(90, 17);
             label2.TabIndex = 30;
-            label2.Text = "Logradouro:";
+            label2.Text = "* Logradouro:";
             // 
             // labelnumero
             // 
@@ -349,9 +352,9 @@
             labelnumero.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelnumero.Location = new Point(405, 98);
             labelnumero.Name = "labelnumero";
-            labelnumero.Size = new Size(59, 17);
+            labelnumero.Size = new Size(68, 17);
             labelnumero.TabIndex = 31;
-            labelnumero.Text = "Número:";
+            labelnumero.Text = "* Número:";
             // 
             // label1
             // 
@@ -369,9 +372,9 @@
             labelbairro.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelbairro.Location = new Point(405, 211);
             labelbairro.Name = "labelbairro";
-            labelbairro.Size = new Size(46, 17);
+            labelbairro.Size = new Size(55, 17);
             labelbairro.TabIndex = 33;
-            labelbairro.Text = "Bairro:";
+            labelbairro.Text = "* Bairro:";
             // 
             // labelmunicipio
             // 
@@ -389,9 +392,9 @@
             labelcep.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelcep.Location = new Point(405, 384);
             labelcep.Name = "labelcep";
-            labelcep.Size = new Size(36, 17);
+            labelcep.Size = new Size(45, 17);
             labelcep.TabIndex = 35;
-            labelcep.Text = "C.E.P";
+            labelcep.Text = "* C.E.P";
             // 
             // labelestado
             // 
@@ -399,9 +402,9 @@
             labelestado.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelestado.Location = new Point(405, 324);
             labelestado.Name = "labelestado";
-            labelestado.Size = new Size(51, 17);
+            labelestado.Size = new Size(60, 17);
             labelestado.TabIndex = 36;
-            labelestado.Text = "Estado:";
+            labelestado.Text = "* Estado:";
             // 
             // buttonCadastrar
             // 
@@ -416,7 +419,7 @@
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(36, 609);
+            labelErro.Location = new Point(39, 625);
             labelErro.Name = "labelErro";
             labelErro.Size = new Size(0, 15);
             labelErro.TabIndex = 38;
@@ -429,11 +432,38 @@
             labelResultado.Size = new Size(0, 15);
             labelResultado.TabIndex = 39;
             // 
+            // dataGridViewClientes
+            // 
+            dataGridViewClientes.AllowUserToAddRows = false;
+            dataGridViewClientes.AllowUserToDeleteRows = false;
+            dataGridViewClientes.AllowUserToOrderColumns = true;
+            dataGridViewClientes.AllowUserToResizeRows = false;
+            dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewClientes.Location = new Point(658, 84);
+            dataGridViewClientes.MultiSelect = false;
+            dataGridViewClientes.Name = "dataGridViewClientes";
+            dataGridViewClientes.ReadOnly = true;
+            dataGridViewClientes.Size = new Size(426, 317);
+            dataGridViewClientes.TabIndex = 3;
+            // 
+            // checkBoxnao
+            // 
+            checkBoxnao.AutoSize = true;
+            checkBoxnao.Location = new Point(36, 490);
+            checkBoxnao.Name = "checkBoxnao";
+            checkBoxnao.RightToLeft = RightToLeft.No;
+            checkBoxnao.Size = new Size(48, 19);
+            checkBoxnao.TabIndex = 40;
+            checkBoxnao.Text = "Não";
+            checkBoxnao.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1125, 712);
+            Controls.Add(checkBoxnao);
+            Controls.Add(dataGridViewClientes);
             Controls.Add(labelResultado);
             Controls.Add(labelErro);
             Controls.Add(buttonCadastrar);
@@ -474,6 +504,7 @@
             Controls.Add(textBoxnome);
             Controls.Add(labelinformações);
             Name = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -519,5 +550,7 @@
         private Button buttonCadastrar;
         private Label labelErro;
         private Label labelResultado;
+        private DataGridView dataGridViewClientes;
+        private CheckBox checkBoxnao;
     }
 }

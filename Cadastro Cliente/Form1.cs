@@ -3,6 +3,7 @@ namespace Cadastro_Cliente
     public partial class Form1 : Form
     {
         List<ClassCliente> clientes = new List<ClassCliente>();
+        private readonly BindingSource BindingSource = [];
         public Form1()
         {
             InitializeComponent();
@@ -12,10 +13,12 @@ namespace Cadastro_Cliente
             clientes.Add(new ClassCliente() { id = 1, nome = "Sarah", dataNascimento = "24/01/2006", telefone = "(11) 97737-3074", email = "Sarahcosta8989@email.com", nomesocial = "Não se aplica", endereco = enderecocliente1, estrangeiro = false, tipo = TipoCliente.PF, genero = GeneroCliente.Feminino, Etnia = EtniaCliente.Negro, });
             clientes.Add(new ClassCliente() { id = 2, nome = "Leticia", dataNascimento = "09/03/2004", telefone = "(11) 94002-8922", email = "letciapurple@email.com", nomesocial = "Não se aplica", endereco = enderecocliente2, estrangeiro = false, tipo = TipoCliente.PF, genero = GeneroCliente.Feminino, Etnia = EtniaCliente.Branco, });
             clientes.Add(new ClassCliente() { id = 3, nome = "Claudia", dataNascimento = "06/03/1989", telefone = "(11) 97951-1319", email = "Claudiasantosdecor@email.com", nomesocial = "Não se aplica", endereco = enderecocliente3, estrangeiro = false, tipo = TipoCliente.PF, genero = GeneroCliente.Feminino, Etnia = EtniaCliente.Branco, });
+
+            BindingSource.DataSource = clientes;
+            dataGridViewClientes.DataSource = BindingSource;
         }
 
-
-        public bool LimparErro()
+            public bool LimparErro()
         {
             labelErro.Text = "";
             return true;
@@ -33,13 +36,13 @@ namespace Cadastro_Cliente
             string cepCliente = maskedTextBoxCep.Text;
 
 
-            if (string.IsNullOrEmpty(nomeCliente))
+            if (string.IsNullOrWhiteSpace(nomeCliente))
             {
                 labelErro.Text = "O nome é obrigatório!!!";
                 labelErro.ForeColor = Color.Red;
-                return true;
+                return false;
             }
-            if (!nomeCliente.All(char.IsLetter))
+            if (nomeCliente.Any(char.IsNumber))
             {
                 labelErro.Text = "O Nome só pode conter letras!!!";
                 labelErro.ForeColor = Color.Red;
@@ -49,7 +52,7 @@ namespace Cadastro_Cliente
 
             if (DataNascCliente == "  /  /    " || DataNascCliente.Length < 10)
             {
-                labelErro.Text = "A Data de Nascimento é obrigatoria!!!";
+                labelErro.Text = "A Data de Nascimento é obrigatória!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -57,7 +60,7 @@ namespace Cadastro_Cliente
 
             if (telefoneCliente == "(  )      -    " || telefoneCliente.Length < 15)
             {
-                labelErro.Text = "O Telefone é obrigatorio!!!";
+                labelErro.Text = "O Telefone é obrigatório!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -65,7 +68,7 @@ namespace Cadastro_Cliente
 
             if (string.IsNullOrWhiteSpace(emailCliente))
             {
-                labelErro.Text = "O Email é obrigatorio!!!";
+                labelErro.Text = "O Email é obrigatório!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -79,7 +82,7 @@ namespace Cadastro_Cliente
 
             if (comboBoxGenero.SelectedItem == null)
             {
-                labelErro.Text = "Selecione algum gênero!!!";
+                labelErro.Text = "Selecione um gênero!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -87,7 +90,14 @@ namespace Cadastro_Cliente
 
             if (comboBoxEtnia.SelectedItem == null)
             {
-                labelErro.Text = "Selecione alguma etnia!!!";
+                labelErro.Text = "Selecione uma etnia!!!";
+                labelErro.ForeColor = Color.Red;
+                return false;
+            }
+
+            if (!checkBoxsim.Checked && !checkBoxnao.Checked)
+            {
+                labelErro.Text = "Selecione uma opção!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -95,7 +105,7 @@ namespace Cadastro_Cliente
 
             if (!radioButtonPF.Checked && !radioButtonPJ.Checked)
             {
-                labelErro.Text = "Selecione algum Tipo!!!";
+                labelErro.Text = "Selecione um Tipo de Cliente!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -103,7 +113,7 @@ namespace Cadastro_Cliente
 
             if (string.IsNullOrWhiteSpace(logradouroCliente))
             {
-                labelErro.Text = "O Logradouro é obrigatorio!!!";
+                labelErro.Text = "O Logradouro é obrigatório!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -111,13 +121,13 @@ namespace Cadastro_Cliente
 
             if (string.IsNullOrWhiteSpace(numeroCliente))
             {
-                labelErro.Text = "O Numero é obrigatorio!!!";
+                labelErro.Text = "O Número é obrigatório!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
             if (numeroCliente.All(char.IsLetter))
             {
-                labelErro.Text = "O Numero não pode só conter letras!!!";
+                labelErro.Text = "O Número não pode só conter letras!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -131,7 +141,7 @@ namespace Cadastro_Cliente
             }
             if (bairroCliente.Any(char.IsNumber))
             {
-                labelErro.Text = "O Bairro não pode conter numeros!!!";
+                labelErro.Text = "O Bairro não pode conter números!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -150,16 +160,24 @@ namespace Cadastro_Cliente
                 return false;
             }
 
-
-            if (string.IsNullOrWhiteSpace(municipioCliente))
+            if (comboBoxestado.SelectedItem == null)
             {
-                labelErro.Text = "O Município é obrigatorio!!!";
+                labelErro.Text = "Selecione um Estado!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
-            if (municipioCliente.Any(char.IsNumber))
+
+
+            if (cepCliente == "     -   " || cepCliente.Length < 9)
             {
-                labelErro.Text = "O Município não pode conter numeros!!!";
+                labelErro.Text = "O CEP é obrigatório!!!";
+                labelErro.ForeColor = Color.Red;
+                return false;
+            }
+
+            if (!checkBoxTermo.Checked)
+            {
+                labelErro.Text = "Você precisa aceitar os Termos e condições para prosseguir com o procedimento!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -184,7 +202,7 @@ namespace Cadastro_Cliente
 
             for (int i = 0; i < clientes.Count; i++)
             {
-                if (emailCliente == clientes[i].email && telefoneCliente == clientes[i].telefone)
+                if (emailCliente == clientes[i].email || telefoneCliente == clientes[i].telefone)
                 {
                     ClienteCadastrado = i;
                 }
@@ -195,7 +213,7 @@ namespace Cadastro_Cliente
             }
             else
             {
-                labelResultado.Text = "Cliente Cadastrado!";
+                labelResultado.Text = "Cliente Cadastrado com sucesso!";
             }
         }
     }
