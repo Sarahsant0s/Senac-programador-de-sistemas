@@ -65,10 +65,9 @@
             labelcep = new Label();
             labelestado = new Label();
             buttonCadastrar = new Button();
+            dataGridViewClientes = new DataGridView();
             labelErro = new Label();
             labelResultado = new Label();
-            dataGridViewClientes = new DataGridView();
-            checkBoxnao = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             SuspendLayout();
             // 
@@ -92,7 +91,7 @@
             // maskedTextBoxnascimento
             // 
             maskedTextBoxnascimento.Location = new Point(36, 175);
-            maskedTextBoxnascimento.Mask = "     00/00/0000";
+            maskedTextBoxnascimento.Mask = "00/00/0000";
             maskedTextBoxnascimento.Name = "maskedTextBoxnascimento";
             maskedTextBoxnascimento.Size = new Size(100, 23);
             maskedTextBoxnascimento.TabIndex = 2;
@@ -101,7 +100,7 @@
             // maskedTextBoxtelefone
             // 
             maskedTextBoxtelefone.Location = new Point(36, 231);
-            maskedTextBoxtelefone.Mask = "  (99) 00000-0000";
+            maskedTextBoxtelefone.Mask = "(99) 00000-0000";
             maskedTextBoxtelefone.Name = "maskedTextBoxtelefone";
             maskedTextBoxtelefone.Size = new Size(100, 23);
             maskedTextBoxtelefone.TabIndex = 3;
@@ -153,7 +152,7 @@
             // 
             radioButtonPJ.AutoSize = true;
             radioButtonPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPJ.Location = new Point(39, 567);
+            radioButtonPJ.Location = new Point(36, 549);
             radioButtonPJ.Name = "radioButtonPJ";
             radioButtonPJ.Size = new Size(115, 21);
             radioButtonPJ.TabIndex = 9;
@@ -165,7 +164,7 @@
             // 
             radioButtonPF.AutoSize = true;
             radioButtonPF.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonPF.Location = new Point(39, 546);
+            radioButtonPF.Location = new Point(36, 528);
             radioButtonPF.Name = "radioButtonPF";
             radioButtonPF.Size = new Size(102, 21);
             radioButtonPF.TabIndex = 10;
@@ -177,7 +176,7 @@
             // 
             checkBoxTermo.AutoSize = true;
             checkBoxTermo.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxTermo.Location = new Point(36, 603);
+            checkBoxTermo.Location = new Point(33, 585);
             checkBoxTermo.Name = "checkBoxTermo";
             checkBoxTermo.Size = new Size(379, 21);
             checkBoxTermo.TabIndex = 11;
@@ -267,7 +266,7 @@
             // 
             labelPFPJ.AutoSize = true;
             labelPFPJ.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPFPJ.Location = new Point(36, 528);
+            labelPFPJ.Location = new Point(33, 510);
             labelPFPJ.Name = "labelPFPJ";
             labelPFPJ.Size = new Size(108, 17);
             labelPFPJ.TabIndex = 21;
@@ -331,7 +330,7 @@
             // maskedTextBoxCep
             // 
             maskedTextBoxCep.Location = new Point(405, 404);
-            maskedTextBoxCep.Mask = "   00000-999";
+            maskedTextBoxCep.Mask = "00000-999";
             maskedTextBoxCep.Name = "maskedTextBoxCep";
             maskedTextBoxCep.Size = new Size(81, 23);
             maskedTextBoxCep.TabIndex = 29;
@@ -415,22 +414,7 @@
             buttonCadastrar.TabIndex = 37;
             buttonCadastrar.Text = "Cadastrar";
             buttonCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // labelErro
-            // 
-            labelErro.AutoSize = true;
-            labelErro.Location = new Point(39, 625);
-            labelErro.Name = "labelErro";
-            labelErro.Size = new Size(0, 15);
-            labelErro.TabIndex = 38;
-            // 
-            // labelResultado
-            // 
-            labelResultado.AutoSize = true;
-            labelResultado.Location = new Point(405, 474);
-            labelResultado.Name = "labelResultado";
-            labelResultado.Size = new Size(0, 15);
-            labelResultado.TabIndex = 39;
+            buttonCadastrar.Click += buttonCadastrar_Click_1;
             // 
             // dataGridViewClientes
             // 
@@ -446,26 +430,32 @@
             dataGridViewClientes.Size = new Size(426, 317);
             dataGridViewClientes.TabIndex = 3;
             // 
-            // checkBoxnao
+            // labelErro
             // 
-            checkBoxnao.AutoSize = true;
-            checkBoxnao.Location = new Point(36, 490);
-            checkBoxnao.Name = "checkBoxnao";
-            checkBoxnao.RightToLeft = RightToLeft.No;
-            checkBoxnao.Size = new Size(48, 19);
-            checkBoxnao.TabIndex = 40;
-            checkBoxnao.Text = "Não";
-            checkBoxnao.UseVisualStyleBackColor = true;
+            labelErro.AutoSize = true;
+            labelErro.Location = new Point(699, 490);
+            labelErro.Name = "labelErro";
+            labelErro.Size = new Size(38, 15);
+            labelErro.TabIndex = 41;
+            labelErro.Text = "label3";
+            // 
+            // labelResultado
+            // 
+            labelResultado.AutoSize = true;
+            labelResultado.Location = new Point(699, 552);
+            labelResultado.Name = "labelResultado";
+            labelResultado.Size = new Size(38, 15);
+            labelResultado.TabIndex = 42;
+            labelResultado.Text = "label3";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1125, 712);
-            Controls.Add(checkBoxnao);
-            Controls.Add(dataGridViewClientes);
             Controls.Add(labelResultado);
             Controls.Add(labelErro);
+            Controls.Add(dataGridViewClientes);
             Controls.Add(buttonCadastrar);
             Controls.Add(labelestado);
             Controls.Add(labelcep);
@@ -548,9 +538,8 @@
         private Label labelcep;
         private Label labelestado;
         private Button buttonCadastrar;
+        private DataGridView dataGridViewClientes;
         private Label labelErro;
         private Label labelResultado;
-        private DataGridView dataGridViewClientes;
-        private CheckBox checkBoxnao;
     }
 }

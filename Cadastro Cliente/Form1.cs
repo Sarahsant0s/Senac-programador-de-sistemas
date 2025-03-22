@@ -7,6 +7,9 @@ namespace Cadastro_Cliente
         public Form1()
         {
             InitializeComponent();
+
+            labelErro.Text = "";
+            labelResultado.Text = "";
             EnderecoCliente enderecocliente1 = new EnderecoCliente() { logradouro = "Rua Luiza Carioba", numero = "72", complemento = "", bairro = "Jardim Monte Verde", municipio = "São Paulo", estado = "São Paulo", cep = "04851-519" };
             EnderecoCliente enderecocliente2 = new EnderecoCliente() { logradouro = "Rua Pera Natal", numero = "140", complemento = "", bairro = "Jardim São Bernardo", municipio = "São Paulo", estado = "São Paulo", cep = "04863-320" };
             EnderecoCliente enderecocliente3 = new EnderecoCliente() { logradouro = "Rua Joaquim Pires", numero = "165", complemento = "", bairro = "Vila Narciso", municipio = "São Paulo", estado = "São Paulo", cep = "04851-803" };
@@ -18,11 +21,12 @@ namespace Cadastro_Cliente
             dataGridViewClientes.DataSource = BindingSource;
         }
 
-            public bool LimparErro()
+        public bool LimparErro()
         {
             labelErro.Text = "";
             return true;
         }
+
         public bool Validacoes()
         {
             string nomeCliente = textBoxnome.Text;
@@ -91,13 +95,6 @@ namespace Cadastro_Cliente
             if (comboBoxEtnia.SelectedItem == null)
             {
                 labelErro.Text = "Selecione uma etnia!!!";
-                labelErro.ForeColor = Color.Red;
-                return false;
-            }
-
-            if (!checkBoxsim.Checked && !checkBoxnao.Checked)
-            {
-                labelErro.Text = "Selecione uma opção!!!";
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
@@ -181,19 +178,86 @@ namespace Cadastro_Cliente
                 labelErro.ForeColor = Color.Red;
                 return false;
             }
+
             return true;
         }
 
 
-        private void buttonCadastrar_Click(object sender, EventArgs e)
+        private void buttonCadastrar_Click_1(object sender, EventArgs e)
         {
             if (!LimparErro())
             {
                 return;
             }
+
             if (!Validacoes())
             {
                 return;
+            }
+
+            TipoCliente tipo;
+
+            if (radioButtonPF.Checked)
+            {
+                tipo = TipoCliente.PF;
+            }
+            else
+            {
+                tipo = TipoCliente.PJ;
+            }
+
+            GeneroCliente Genero;
+
+            switch (comboBoxGenero.SelectedIndex)
+            {
+                case 0:
+                    Genero = GeneroCliente.Masculino;
+                    break;
+
+                case 1:
+                    Genero = GeneroCliente.Feminino;
+                    break;
+
+                case 2:
+                    Genero = GeneroCliente.Nãobinário;
+                    break;
+
+                case 3:
+                    Genero = GeneroCliente.Prefironãoopinar;
+                    break;
+
+                default:
+                    Genero = GeneroCliente.Prefironãoopinar;
+                    break;
+            }
+
+            EtniaCliente etnia;
+
+            switch (comboBoxEtnia.SelectedIndex)
+            {
+                case 0:
+                    etnia = EtniaCliente.Branco;
+                    break;
+
+                case 1:
+                    etnia = EtniaCliente.Negro;
+                    break;
+
+                case 2:
+                    etnia = EtniaCliente.Pardo;
+                    break;
+
+                case 3:
+                    etnia = EtniaCliente.Amarelo;
+                    break;
+
+                case 4:
+                    etnia = EtniaCliente.Indigena;
+                    break;
+
+                default:
+                    etnia = EtniaCliente.Indigena;
+                    break;
             }
 
             string emailCliente = textBoxemail.Text;
@@ -210,10 +274,15 @@ namespace Cadastro_Cliente
             if (ClienteCadastrado > -1)
             {
                 labelResultado.Text = "Cliente já cadastrado!";
+                labelResultado.ForeColor = Color.Red;
             }
             else
             {
+                EnderecoCliente enderecoNovoCliente = new EnderecoCliente() { logradouro = textBoxLogradouro.Text, numero = textBoxnumero.Text, complemento = textBoxcomplemento.Text, bairro = textBoxbairro.Text, municipio = textBoxmunicipio.Text, estado = comboBoxestado.Text, cep = maskedTextBoxCep.Text };
+                clientes.Add(new ClassCliente() { id = clientes.ElementAt(clientes.Count - 1).id + 1, nome = textBoxnome.Text, dataNascimento = maskedTextBoxnascimento.Text, telefone = maskedTextBoxtelefone.Text, email = textBoxemail.Text, genero = Genero, nomesocial = textBoxnomesocial.Text, Etnia = etnia, estrangeiro = checkBoxsim.Checked, tipo = tipo, endereco = enderecoNovoCliente });
                 labelResultado.Text = "Cliente Cadastrado com sucesso!";
+                labelResultado.ForeColor = Color.Green;
+                BindingSource.ResetBindings(false);
             }
         }
     }
