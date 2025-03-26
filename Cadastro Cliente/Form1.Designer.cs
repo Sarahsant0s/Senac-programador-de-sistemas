@@ -381,9 +381,9 @@
             labelmunicipio.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelmunicipio.Location = new Point(405, 271);
             labelmunicipio.Name = "labelmunicipio";
-            labelmunicipio.Size = new Size(68, 17);
+            labelmunicipio.Size = new Size(77, 17);
             labelmunicipio.TabIndex = 34;
-            labelmunicipio.Text = "Município:";
+            labelmunicipio.Text = "* Município:";
             // 
             // labelcep
             // 
@@ -433,20 +433,18 @@
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(699, 490);
+            labelErro.Location = new Point(405, 494);
             labelErro.Name = "labelErro";
-            labelErro.Size = new Size(38, 15);
+            labelErro.Size = new Size(0, 15);
             labelErro.TabIndex = 41;
-            labelErro.Text = "label3";
             // 
             // labelResultado
             // 
             labelResultado.AutoSize = true;
-            labelResultado.Location = new Point(699, 552);
+            labelResultado.Location = new Point(405, 534);
             labelResultado.Name = "labelResultado";
-            labelResultado.Size = new Size(38, 15);
+            labelResultado.Size = new Size(0, 15);
             labelResultado.TabIndex = 42;
-            labelResultado.Text = "label3";
             // 
             // Form1
             // 
