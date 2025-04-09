@@ -116,6 +116,7 @@
             buttonCadastrar.TabIndex = 7;
             buttonCadastrar.Text = "Cadastrar";
             buttonCadastrar.UseVisualStyleBackColor = true;
+            buttonCadastrar.Click += buttonCadastrar_Click_1;
             // 
             // label4
             // 
@@ -186,8 +187,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(889, 313);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(586, 313);
             Controls.Add(labelNovoUsuario);
             Controls.Add(novaSenha);
             Controls.Add(NovoUsuario);
@@ -206,7 +207,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
             Text = "login :)";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

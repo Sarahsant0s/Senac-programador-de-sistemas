@@ -1,3 +1,4 @@
+using MySql.Data.MySqlClient;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -6,27 +7,14 @@ namespace Login
 {
     public partial class Form1 : Form
     {
-        List<string> listaUsuarios = new List<string>() { "neymar.jr", "pablo vitar", "sukuna.silva" };
-        List<string> listaSenhas = new List<string>() { "Bruna@123", "12345Abc", "Sete7Sete" };
-
-        Usuario neymar = new Usuario() { Email = "neymar.jr@email.com", Senha = "Bruna@123" };
-        Usuario pablo = new Usuario() { Email = "pablo.vitar2email.com", Senha = "12345Abc" };
-        Usuario sukuna = new Usuario() { Email = "sukuna.silva@email.com", Senha = "Sete7Sete" };
-
-        List<Usuario> usuario = new List<Usuario>();
-
+        private static readonly string Connectionstring = "datasource=localhost;usename=root;password=;database=senac;";
+        private readonly MySqlConnection Connection = new MySqlConnection(Connectionstring);
 
         public Form1()
         {
             InitializeComponent();
-            usuario.Add(neymar);
-            usuario.Add(pablo);
-            usuario.Add(sukuna);
+
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        { }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string usuarioBuscado = textBoxUsuário.Text;
@@ -46,20 +34,32 @@ namespace Login
                 return;
             }
 
-            int posicaoUsuarioEncontrado = -1;
+            bool autenticado = false;
 
-            for (int i = 0; i < listaUsuarios.Count; i++)
+            try
             {
+                Connection.Open();
 
-                if (usuarioBuscado == listaUsuarios[i])
-                {
-                    posicaoUsuarioEncontrado = i;
-                }
+                string query = $"SELECT senha FROM usuario WHERE email = '{usuarioBuscado}';";
+
+                MySqlCommand mySqlCommand = new MySqlCommand(query, Connection);
+                MySqlDataReader reader = mySqlCommand.ExecuteReader();
+
+                autenticado = reader.Read() && reader.GetString(0) == senha;
+            }
+
+            catch
+            {
+                MessageBox.Show("Erro de banco de dados");
+            }
+
+            finally
+            {
+                Connection.Close();
             }
 
 
-
-            if (posicaoUsuarioEncontrado > -1 && senha == listaSenhas[posicaoUsuarioEncontrado])
+            if (!autenticado)
             {
                 labelResultado.Text = "Autenticado com sucesso!";
                 labelResultado.ForeColor = Color.Green;
@@ -73,7 +73,8 @@ namespace Login
 
         }
 
-        private void buttonCadastrar_Click(object sender, EventArgs e)
+
+        private void buttonCadastrar_Click_1(object sender, EventArgs e)
         {
             string novousuario = NovoUsuario.Text;
             string novasenha = novaSenha.Text;
@@ -89,7 +90,7 @@ namespace Login
                 labelResultado.Text = " A senha é obrigatória!!!";
                 return;
             }
-             
+
 
             if (novasenha.Length < 8)
             {
@@ -127,19 +128,62 @@ namespace Login
                 return;
             }
 
-            if (listaUsuarios.Contains(novousuario))
+            bool encontrado = false;
+
+            try
+            {
+                Connection.Open();
+
+                string query = $"SELECT email FROM usuario WHERE email = '{novousuario}';";
+
+                MySqlCommand mySqlCommand = new MySqlCommand(query, Connection);
+                MySqlDataReader reader = mySqlCommand.ExecuteReader();
+
+                encontrado = reader.Read();
+            }
+
+            catch
+            {
+                MessageBox.Show("Erro de banco de dados");
+            }
+
+            finally
+            {
+                Connection.Close();
+            }
+
+
+            if (!encontrado)
             {
                 labelResultado.Text = "Já existe um usuário cadastrado.";
                 return;
             }
 
-            listaUsuarios.Add(novousuario);
-            listaSenhas.Add(novasenha);
-            labelResultado.Text = "Usuário cadastrado com sucesso!";
+            try
+            {
+                Connection.Open();
+
+                string query = $"INSERT INTO usuarios (email, senha) VALUES ('{novousuario}','{novasenha}');";
+
+                MySqlCommand mySqlCommand = new MySqlCommand(query, Connection);
+                mySqlCommand.ExecuteNonQuery();
+
+                labelResultado.Text = "Usuário cadastrado com sucesso!";
+            }
+
+            catch
+            {
+                MessageBox.Show("Erro de banco de dados");
+            }
+
+            finally
+            {
+                Connection.Close();
+            }
+
             NovoUsuario.Clear();
             novaSenha.Clear();
         }
-
     }
 
 }
