@@ -10,7 +10,7 @@ namespace ListaAtividades.Banco_de_dados
 {
     internal class Database
     {
-        private static readonly string ConnectionString = "datasource=localhost;username=root;password=;database=senacmarcelo;";
+        private static readonly string ConnectionString = "datasource=localhost;username=root;password=;database=senac_sarah;";
 
         public static MySqlConnection GetConnection()
         {
