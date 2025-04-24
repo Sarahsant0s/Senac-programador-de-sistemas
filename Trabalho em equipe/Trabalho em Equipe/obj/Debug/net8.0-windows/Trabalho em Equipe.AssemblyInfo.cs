@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trabalho em Equipe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc0209f41c06f678e3ecc3b8cfab06db91bb89f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abf1b7bdaae7043204b7bec8cda08e4f8780fd49")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trabalho em Equipe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trabalho em Equipe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
