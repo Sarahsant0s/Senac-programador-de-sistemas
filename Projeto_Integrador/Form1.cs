@@ -14,7 +14,7 @@ namespace Projeto_Integrador
             Vendas novoForm = new Vendas();
             novoForm.ShowDialog();
 
-            this.Close();
         }
+
     }
 }

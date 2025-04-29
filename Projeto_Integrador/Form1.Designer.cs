@@ -39,14 +39,16 @@
             labelCPF = new Label();
             labelTel = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox2 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // buttonCadastrar
             // 
-            buttonCadastrar.Location = new Point(370, 344);
+            buttonCadastrar.Location = new Point(152, 187);
             buttonCadastrar.Name = "buttonCadastrar";
             buttonCadastrar.Size = new Size(99, 25);
             buttonCadastrar.TabIndex = 0;
@@ -55,14 +57,14 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(316, 101);
+            textBoxNome.Location = new Point(12, 59);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(239, 23);
             textBoxNome.TabIndex = 1;
             // 
             // maskedTextBoxTel
             // 
-            maskedTextBoxTel.Location = new Point(316, 291);
+            maskedTextBoxTel.Location = new Point(12, 241);
             maskedTextBoxTel.Mask = "(00)00000-0000";
             maskedTextBoxTel.Name = "maskedTextBoxTel";
             maskedTextBoxTel.Size = new Size(100, 23);
@@ -70,7 +72,7 @@
             // 
             // maskedTextBoxCPF
             // 
-            maskedTextBoxCPF.Location = new Point(316, 226);
+            maskedTextBoxCPF.Location = new Point(12, 176);
             maskedTextBoxCPF.Mask = "000.000.000-00";
             maskedTextBoxCPF.Name = "maskedTextBoxCPF";
             maskedTextBoxCPF.Size = new Size(100, 23);
@@ -78,7 +80,7 @@
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(316, 165);
+            textBoxEmail.Location = new Point(12, 120);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(239, 23);
             textBoxEmail.TabIndex = 5;
@@ -86,7 +88,7 @@
             // labelNome
             // 
             labelNome.AutoSize = true;
-            labelNome.Location = new Point(316, 83);
+            labelNome.Location = new Point(12, 41);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(43, 15);
             labelNome.TabIndex = 6;
@@ -95,7 +97,7 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(316, 147);
+            labelEmail.Location = new Point(12, 102);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(44, 15);
             labelEmail.TabIndex = 7;
@@ -104,7 +106,7 @@
             // labelCPF
             // 
             labelCPF.AutoSize = true;
-            labelCPF.Location = new Point(316, 208);
+            labelCPF.Location = new Point(12, 158);
             labelCPF.Name = "labelCPF";
             labelCPF.Size = new Size(31, 15);
             labelCPF.TabIndex = 8;
@@ -113,7 +115,7 @@
             // labelTel
             // 
             labelTel.AutoSize = true;
-            labelTel.Location = new Point(316, 273);
+            labelTel.Location = new Point(12, 218);
             labelTel.Name = "labelTel";
             labelTel.Size = new Size(57, 15);
             labelTel.TabIndex = 9;
@@ -122,41 +124,49 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(304, 22);
+            label1.Font = new Font("Britannic Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(251, 29);
+            label1.Size = new Size(231, 27);
             label1.TabIndex = 10;
             label1.Text = "Cadastro de Clientes";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(272, 426);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            // 
             // button1
             // 
-            button1.Location = new Point(537, 415);
+            button1.Location = new Point(152, 239);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(99, 25);
             button1.TabIndex = 12;
-            button1.Text = "Proxímo";
+            button1.Text = "Próximo";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(-58, 293);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(375, 199);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(578, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(530, 464);
+            dataGridView1.TabIndex = 14;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(624, 450);
+            ClientSize = new Size(1120, 504);
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(labelTel);
             Controls.Add(labelCPF);
@@ -167,9 +177,11 @@
             Controls.Add(maskedTextBoxTel);
             Controls.Add(textBoxNome);
             Controls.Add(buttonCadastrar);
+            Controls.Add(pictureBox2);
             Name = "Form1";
             Text = "Cadastre-se";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,7 +198,8 @@
         private Label labelCPF;
         private Label labelTel;
         private Label label1;
-        private PictureBox pictureBox1;
         private Button button1;
+        private PictureBox pictureBox2;
+        private DataGridView dataGridView1;
     }
 }

@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS clientes (
 	
 
     
-    
+    DROP TABLE cliente;
     
     
     

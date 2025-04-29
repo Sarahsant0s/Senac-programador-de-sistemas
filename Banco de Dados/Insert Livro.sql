@@ -1,5 +1,5 @@
 INSERT INTO livro (
-	titulo, data_publicacao, preco, numero_paginas, isbn, id_genero, id_editora, id_autor
+	titulo, data_atividadepublicacao, preco, numero_paginas, isbn, id_genero, id_editora, id_autor
 ) VALUES 
 (
 'titulo do meu livro',

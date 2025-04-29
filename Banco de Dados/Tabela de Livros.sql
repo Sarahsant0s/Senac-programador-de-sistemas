@@ -1,26 +1,22 @@
-SELECT 
-    *
-FROM
-    livro
-WHERE
-    data_publicacao >= '1990-01-01 00:00:00'
-AND 
-	data_publicacao <= '1999-12-31 23:59:59';
-    
-SELECT * FROM livro
-WHERE (data_publicacao) BETWEEN '1990-01-01 00:00:00' and '1999-12-31 23:59:59';
+CREATE TABLE IF NOT EXISTS livro (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    data_publicacao DATETIME NOT NULL,
+    numero_paginas INT NULL,
+    preco DECIMAL(10, 2) NULL,
+    isbn VARCHAR(17) NOT NULL UNIQUE,
+    apagado BIT NOT NULL DEFAULT 0,
+    id_genero INT NOT NULL,
+    id_editora INT NOT NULL,
+    id_autor INT NOT NULL,
+    criado_em DATETIME NOT NULL DEFAULT NOW(),
+    FOREIGN KEY (id_genero)
+		REFERENCES genero (id),
+	FOREIGN KEY (id_editora)
+		REFERENCES editora(id),
+	FOREIGN KEY (id_autor)
+		REFERENCES autor (id) 
+);
 
-SELECT * FROM livro 
-WHERE YEAR (data_publicacao) BETWEEN '1990' and '1999';
 
-SELECT autor FROM livro;
 
-SELECT DISTINCT (autor) FROM lçivro;
-
-SELECT sum(preco), AVG(preco), max(preco), min(preco) FROM livro 
-WHERE autor = 'rafael souza';
-
-SELECT count(id) FROM livro;
-
-SELECT * FROM livro
-ORDER BY titulo DESC;
