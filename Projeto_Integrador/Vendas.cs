@@ -19,7 +19,8 @@ namespace Projeto_Integrador
 
         private void Vendas_Load(object sender, EventArgs e)
         {
-            
+
         }
+
     }
 }
