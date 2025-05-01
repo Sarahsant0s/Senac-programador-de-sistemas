@@ -31,133 +31,207 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendas));
             pictureBox1 = new PictureBox();
             buttonBuscar = new Button();
-            textBox1 = new TextBox();
-            maskedTextBox1 = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            numericUpDown1 = new NumericUpDown();
+            textBoxBuscarNomeCliente = new TextBox();
+            numericUpDownQuantidade = new NumericUpDown();
             labelCliente = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            labelQuant = new Label();
+            labelServico = new Label();
+            labelProduto = new Label();
             label5 = new Label();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            buttonConcluirPedido = new Button();
+            dataGridView1 = new DataGridView();
+            comboBoxOpcaoPagamento = new ComboBox();
+            textBoxValorFinal = new TextBox();
+            checkBoxPagamento = new CheckBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(579, 345);
+            pictureBox1.Location = new Point(459, 263);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(315, 114);
+            pictureBox1.Size = new Size(436, 284);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // buttonBuscar
             // 
-            buttonBuscar.Location = new Point(368, 35);
+            buttonBuscar.Location = new Point(820, 38);
             buttonBuscar.Name = "buttonBuscar";
             buttonBuscar.Size = new Size(75, 23);
             buttonBuscar.TabIndex = 1;
             buttonBuscar.Text = "Buscar";
             buttonBuscar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxBuscarNomeCliente
             // 
-            textBox1.Location = new Point(65, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(297, 23);
-            textBox1.TabIndex = 2;
+            textBoxBuscarNomeCliente.Location = new Point(459, 38);
+            textBoxBuscarNomeCliente.Name = "textBoxBuscarNomeCliente";
+            textBoxBuscarNomeCliente.Size = new Size(355, 23);
+            textBoxBuscarNomeCliente.TabIndex = 2;
             // 
-            // maskedTextBox1
+            // numericUpDownQuantidade
             // 
-            maskedTextBox1.Location = new Point(12, 140);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(100, 23);
-            maskedTextBox1.TabIndex = 3;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(12, 182);
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 23);
-            maskedTextBox2.TabIndex = 4;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(254, 140);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 5;
+            numericUpDownQuantidade.Location = new Point(183, 137);
+            numericUpDownQuantidade.Name = "numericUpDownQuantidade";
+            numericUpDownQuantidade.Size = new Size(120, 23);
+            numericUpDownQuantidade.TabIndex = 5;
             // 
             // labelCliente
             // 
             labelCliente.AutoSize = true;
-            labelCliente.Location = new Point(12, 38);
+            labelCliente.Location = new Point(457, 20);
             labelCliente.Name = "labelCliente";
             labelCliente.Size = new Size(47, 15);
             labelCliente.TabIndex = 6;
             labelCliente.Text = "Cliente:";
             // 
-            // label2
+            // labelQuant
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(254, 122);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Quantidade:";
+            labelQuant.AutoSize = true;
+            labelQuant.Location = new Point(183, 119);
+            labelQuant.Name = "labelQuant";
+            labelQuant.Size = new Size(72, 15);
+            labelQuant.TabIndex = 7;
+            labelQuant.Text = "Quantidade:";
             // 
-            // label3
+            // labelServico
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(278, 164);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 8;
-            label3.Text = "label3";
+            labelServico.AutoSize = true;
+            labelServico.Location = new Point(12, 64);
+            labelServico.Name = "labelServico";
+            labelServico.Size = new Size(48, 15);
+            labelServico.TabIndex = 8;
+            labelServico.Text = "Serviço:";
             // 
-            // label4
+            // labelProduto
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(429, 249);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 9;
-            label4.Text = "label4";
+            labelProduto.AutoSize = true;
+            labelProduto.Location = new Point(183, 64);
+            labelProduto.Name = "labelProduto";
+            labelProduto.Size = new Size(53, 15);
+            labelProduto.TabIndex = 9;
+            labelProduto.Text = "Produto:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(310, 281);
+            label5.Location = new Point(50, 263);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(10, 15);
             label5.TabIndex = 10;
-            label5.Text = "label5";
+            label5.Text = ".";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Amarrador", "Água Oxigenada", "Condicionador", "Escova", "Hidratante Labial", "Leave-in", "Luva", "Máscara facial ", "Máscara de tratamento", "Maquiagens", "Modelador de cachos", "Óleos", "Pente ", "Pó descolorante", "Protetor solar capilar", "Protetor térmico", "Reparador de pontas", "Shampoo", "Spray fixador" });
+            comboBox1.Location = new Point(183, 82);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 11;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Alisamento", "Cortes", "Coloração", "Escova", "Hidratação", "Luzes", "Mechas", "Nutrição", "Penteados", "Progressiva", "Reconstrução", "Sobrancelha" });
+            comboBox2.Location = new Point(12, 82);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 12;
+            // 
+            // buttonConcluirPedido
+            // 
+            buttonConcluirPedido.Location = new Point(89, 286);
+            buttonConcluirPedido.Name = "buttonConcluirPedido";
+            buttonConcluirPedido.Size = new Size(135, 23);
+            buttonConcluirPedido.TabIndex = 13;
+            buttonConcluirPedido.Text = "Concluir Pedido";
+            buttonConcluirPedido.UseVisualStyleBackColor = true;
+            buttonConcluirPedido.Click += buttonConcluirPedido_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(459, 67);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(436, 231);
+            dataGridView1.TabIndex = 14;
+            // 
+            // comboBoxOpcaoPagamento
+            // 
+            comboBoxOpcaoPagamento.FormattingEnabled = true;
+            comboBoxOpcaoPagamento.Items.AddRange(new object[] { "Boletos", "Cartão de Crédito & Débito", "Carteira Digital", "Dinheiro", "Links de Pagamento", "Pix", "Transferências Bancárias" });
+            comboBoxOpcaoPagamento.Location = new Point(12, 185);
+            comboBoxOpcaoPagamento.Name = "comboBoxOpcaoPagamento";
+            comboBoxOpcaoPagamento.Size = new Size(121, 23);
+            comboBoxOpcaoPagamento.TabIndex = 15;
+            // 
+            // textBoxValorFinal
+            // 
+            textBoxValorFinal.Enabled = false;
+            textBoxValorFinal.Location = new Point(183, 185);
+            textBoxValorFinal.Name = "textBoxValorFinal";
+            textBoxValorFinal.ReadOnly = true;
+            textBoxValorFinal.Size = new Size(120, 23);
+            textBoxValorFinal.TabIndex = 16;
+            // 
+            // checkBoxPagamento
+            // 
+            checkBoxPagamento.AutoSize = true;
+            checkBoxPagamento.Location = new Point(12, 214);
+            checkBoxPagamento.Name = "checkBoxPagamento";
+            checkBoxPagamento.Size = new Size(171, 19);
+            checkBoxPagamento.TabIndex = 17;
+            checkBoxPagamento.Text = "Pagamento Posteriormente";
+            checkBoxPagamento.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(73, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(182, 27);
+            label1.TabIndex = 18;
+            label1.Text = "Adicionar Pedido";
             // 
             // Vendas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(922, 508);
+            Controls.Add(label1);
+            Controls.Add(checkBoxPagamento);
+            Controls.Add(textBoxValorFinal);
+            Controls.Add(comboBoxOpcaoPagamento);
+            Controls.Add(dataGridView1);
+            Controls.Add(buttonConcluirPedido);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(labelProduto);
+            Controls.Add(labelServico);
+            Controls.Add(labelQuant);
             Controls.Add(labelCliente);
-            Controls.Add(numericUpDown1);
-            Controls.Add(maskedTextBox2);
-            Controls.Add(maskedTextBox1);
-            Controls.Add(textBox1);
+            Controls.Add(numericUpDownQuantidade);
+            Controls.Add(textBoxBuscarNomeCliente);
             Controls.Add(buttonBuscar);
             Controls.Add(pictureBox1);
             Name = "Vendas";
-            Text = "Vendas";
+            Text = "Pedido";
             Load += Vendas_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,14 +240,20 @@
 
         private PictureBox pictureBox1;
         private Button buttonBuscar;
-        private TextBox textBox1;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
-        private NumericUpDown numericUpDown1;
+        private TextBox textBoxBuscarNomeCliente;
+        private NumericUpDown numericUpDownQuantidade;
         private Label labelCliente;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label labelQuant;
+        private Label labelServico;
+        private Label labelProduto;
         private Label label5;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private Button buttonConcluirPedido;
+        private DataGridView dataGridView1;
+        private ComboBox comboBoxOpcaoPagamento;
+        private TextBox textBoxValorFinal;
+        private CheckBox checkBoxPagamento;
+        private Label label1;
     }
 }

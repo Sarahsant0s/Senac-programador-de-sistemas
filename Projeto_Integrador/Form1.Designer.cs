@@ -49,7 +49,7 @@
             // 
             // buttonCadastrar
             // 
-            buttonCadastrar.Location = new Point(196, 172);
+            buttonCadastrar.Location = new Point(41, 287);
             buttonCadastrar.Name = "buttonCadastrar";
             buttonCadastrar.Size = new Size(99, 25);
             buttonCadastrar.TabIndex = 0;
@@ -58,14 +58,14 @@
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(12, 59);
+            textBoxNome.Location = new Point(12, 94);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(266, 23);
             textBoxNome.TabIndex = 1;
             // 
             // maskedTextBoxTel
             // 
-            maskedTextBoxTel.Location = new Point(419, 117);
+            maskedTextBoxTel.Location = new Point(178, 245);
             maskedTextBoxTel.Mask = "(00)00000-0000";
             maskedTextBoxTel.Name = "maskedTextBoxTel";
             maskedTextBoxTel.Size = new Size(100, 23);
@@ -73,7 +73,7 @@
             // 
             // maskedTextBoxCPF
             // 
-            maskedTextBoxCPF.Location = new Point(97, 117);
+            maskedTextBoxCPF.Location = new Point(12, 245);
             maskedTextBoxCPF.Mask = "000.000.000-00";
             maskedTextBoxCPF.Name = "maskedTextBoxCPF";
             maskedTextBoxCPF.Size = new Size(100, 23);
@@ -81,7 +81,7 @@
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(320, 59);
+            textBoxEmail.Location = new Point(12, 161);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(266, 23);
             textBoxEmail.TabIndex = 5;
@@ -89,7 +89,7 @@
             // labelNome
             // 
             labelNome.AutoSize = true;
-            labelNome.Location = new Point(12, 41);
+            labelNome.Location = new Point(12, 76);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(51, 15);
             labelNome.TabIndex = 6;
@@ -98,7 +98,7 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(320, 41);
+            labelEmail.Location = new Point(11, 143);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(52, 15);
             labelEmail.TabIndex = 7;
@@ -107,7 +107,7 @@
             // labelCPF
             // 
             labelCPF.AutoSize = true;
-            labelCPF.Location = new Point(124, 99);
+            labelCPF.Location = new Point(12, 220);
             labelCPF.Name = "labelCPF";
             labelCPF.Size = new Size(39, 15);
             labelCPF.TabIndex = 8;
@@ -116,7 +116,7 @@
             // labelTel
             // 
             labelTel.AutoSize = true;
-            labelTel.Location = new Point(429, 99);
+            labelTel.Location = new Point(178, 220);
             labelTel.Name = "labelTel";
             labelTel.Size = new Size(65, 15);
             labelTel.TabIndex = 9;
@@ -126,7 +126,7 @@
             // 
             labelTitulo.AutoSize = true;
             labelTitulo.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(210, 9);
+            labelTitulo.Location = new Point(21, 9);
             labelTitulo.Name = "labelTitulo";
             labelTitulo.Size = new Size(216, 27);
             labelTitulo.TabIndex = 10;
@@ -134,7 +134,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(301, 172);
+            button1.Location = new Point(157, 287);
             button1.Name = "button1";
             button1.Size = new Size(99, 25);
             button1.TabIndex = 12;
@@ -145,17 +145,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 203);
+            dataGridView1.Location = new Point(331, 21);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(574, 227);
+            dataGridView1.Size = new Size(483, 282);
             dataGridView1.TabIndex = 14;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(178, 418);
+            pictureBox1.Location = new Point(-55, 349);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(267, 130);
+            pictureBox1.Size = new Size(455, 240);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
@@ -163,7 +163,7 @@
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(226, 142);
+            labelErro.Location = new Point(53, 331);
             labelErro.Name = "labelErro";
             labelErro.Size = new Size(10, 15);
             labelErro.TabIndex = 16;
@@ -174,7 +174,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(604, 535);
+            ClientSize = new Size(862, 561);
             Controls.Add(labelErro);
             Controls.Add(textBoxEmail);
             Controls.Add(labelTel);

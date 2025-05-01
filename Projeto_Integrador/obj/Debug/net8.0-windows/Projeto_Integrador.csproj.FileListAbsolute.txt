@@ -17,3 +17,4 @@ D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.genruntimeconfig.cache
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\ref\Projeto_Integrador.dll
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Vendas.resources
+D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Fiscalização_dos_Pedidos.resources

@@ -21,6 +21,10 @@ namespace Projeto_Integrador
         {
 
         }
-
+        private void buttonConcluirPedido_Click(object sender, EventArgs e)
+        {
+            Fiscalização_dos_Pedidos novoForm = new Fiscalização_dos_Pedidos();
+            novoForm.ShowDialog();
+        }
     }
 }
