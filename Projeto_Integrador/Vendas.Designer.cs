@@ -37,18 +37,20 @@
             labelQuant = new Label();
             labelServico = new Label();
             labelProduto = new Label();
-            label5 = new Label();
+            labelErro = new Label();
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             buttonConcluirPedido = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewBuscarClientes = new DataGridView();
             comboBoxOpcaoPagamento = new ComboBox();
             textBoxValorFinal = new TextBox();
             checkBoxPagamento = new CheckBox();
-            label1 = new Label();
+            labelTitulo = new Label();
+            labelFormaDePag = new Label();
+            labelValorTotal = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBuscarClientes).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -79,7 +81,7 @@
             // 
             // numericUpDownQuantidade
             // 
-            numericUpDownQuantidade.Location = new Point(183, 137);
+            numericUpDownQuantidade.Location = new Point(310, 83);
             numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             numericUpDownQuantidade.Size = new Size(120, 23);
             numericUpDownQuantidade.TabIndex = 5;
@@ -96,7 +98,7 @@
             // labelQuant
             // 
             labelQuant.AutoSize = true;
-            labelQuant.Location = new Point(183, 119);
+            labelQuant.Location = new Point(310, 64);
             labelQuant.Name = "labelQuant";
             labelQuant.Size = new Size(72, 15);
             labelQuant.TabIndex = 7;
@@ -120,14 +122,14 @@
             labelProduto.TabIndex = 9;
             labelProduto.Text = "Produto:";
             // 
-            // label5
+            // labelErro
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(50, 263);
-            label5.Name = "label5";
-            label5.Size = new Size(10, 15);
-            label5.TabIndex = 10;
-            label5.Text = ".";
+            labelErro.AutoSize = true;
+            labelErro.Location = new Point(63, 295);
+            labelErro.Name = "labelErro";
+            labelErro.Size = new Size(10, 15);
+            labelErro.TabIndex = 10;
+            labelErro.Text = ".";
             // 
             // comboBox1
             // 
@@ -144,12 +146,12 @@
             comboBox2.Items.AddRange(new object[] { "Alisamento", "Cortes", "Coloração", "Escova", "Hidratação", "Luzes", "Mechas", "Nutrição", "Penteados", "Progressiva", "Reconstrução", "Sobrancelha" });
             comboBox2.Location = new Point(12, 82);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
+            comboBox2.Size = new Size(124, 23);
             comboBox2.TabIndex = 12;
             // 
             // buttonConcluirPedido
             // 
-            buttonConcluirPedido.Location = new Point(89, 286);
+            buttonConcluirPedido.Location = new Point(92, 263);
             buttonConcluirPedido.Name = "buttonConcluirPedido";
             buttonConcluirPedido.Size = new Size(135, 23);
             buttonConcluirPedido.TabIndex = 13;
@@ -157,27 +159,27 @@
             buttonConcluirPedido.UseVisualStyleBackColor = true;
             buttonConcluirPedido.Click += buttonConcluirPedido_Click;
             // 
-            // dataGridView1
+            // dataGridViewBuscarClientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(459, 67);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(436, 231);
-            dataGridView1.TabIndex = 14;
+            dataGridViewBuscarClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewBuscarClientes.Location = new Point(459, 67);
+            dataGridViewBuscarClientes.Name = "dataGridViewBuscarClientes";
+            dataGridViewBuscarClientes.Size = new Size(436, 231);
+            dataGridViewBuscarClientes.TabIndex = 14;
             // 
             // comboBoxOpcaoPagamento
             // 
             comboBoxOpcaoPagamento.FormattingEnabled = true;
             comboBoxOpcaoPagamento.Items.AddRange(new object[] { "Boletos", "Cartão de Crédito & Débito", "Carteira Digital", "Dinheiro", "Links de Pagamento", "Pix", "Transferências Bancárias" });
-            comboBoxOpcaoPagamento.Location = new Point(12, 185);
+            comboBoxOpcaoPagamento.Location = new Point(12, 157);
             comboBoxOpcaoPagamento.Name = "comboBoxOpcaoPagamento";
-            comboBoxOpcaoPagamento.Size = new Size(121, 23);
+            comboBoxOpcaoPagamento.Size = new Size(124, 23);
             comboBoxOpcaoPagamento.TabIndex = 15;
             // 
             // textBoxValorFinal
             // 
             textBoxValorFinal.Enabled = false;
-            textBoxValorFinal.Location = new Point(183, 185);
+            textBoxValorFinal.Location = new Point(184, 157);
             textBoxValorFinal.Name = "textBoxValorFinal";
             textBoxValorFinal.ReadOnly = true;
             textBoxValorFinal.Size = new Size(120, 23);
@@ -186,22 +188,40 @@
             // checkBoxPagamento
             // 
             checkBoxPagamento.AutoSize = true;
-            checkBoxPagamento.Location = new Point(12, 214);
+            checkBoxPagamento.Location = new Point(78, 204);
             checkBoxPagamento.Name = "checkBoxPagamento";
-            checkBoxPagamento.Size = new Size(171, 19);
+            checkBoxPagamento.Size = new Size(158, 19);
             checkBoxPagamento.TabIndex = 17;
-            checkBoxPagamento.Text = "Pagamento Posteriormente";
+            checkBoxPagamento.Text = "Pagamento Subsequente";
             checkBoxPagamento.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelTitulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(73, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 27);
-            label1.TabIndex = 18;
-            label1.Text = "Adicionar Pedido";
+            labelTitulo.AutoSize = true;
+            labelTitulo.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitulo.Location = new Point(73, 20);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(182, 27);
+            labelTitulo.TabIndex = 18;
+            labelTitulo.Text = "Adicionar Pedido";
+            // 
+            // labelFormaDePag
+            // 
+            labelFormaDePag.AutoSize = true;
+            labelFormaDePag.Location = new Point(12, 139);
+            labelFormaDePag.Name = "labelFormaDePag";
+            labelFormaDePag.Size = new Size(124, 15);
+            labelFormaDePag.TabIndex = 19;
+            labelFormaDePag.Text = "Forma de Pagamento:";
+            // 
+            // labelValorTotal
+            // 
+            labelValorTotal.AutoSize = true;
+            labelValorTotal.Location = new Point(186, 139);
+            labelValorTotal.Name = "labelValorTotal";
+            labelValorTotal.Size = new Size(64, 15);
+            labelValorTotal.TabIndex = 20;
+            labelValorTotal.Text = "Valor Total:";
             // 
             // Vendas
             // 
@@ -209,15 +229,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(922, 508);
-            Controls.Add(label1);
+            Controls.Add(labelValorTotal);
+            Controls.Add(labelFormaDePag);
+            Controls.Add(labelTitulo);
             Controls.Add(checkBoxPagamento);
             Controls.Add(textBoxValorFinal);
             Controls.Add(comboBoxOpcaoPagamento);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewBuscarClientes);
             Controls.Add(buttonConcluirPedido);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
-            Controls.Add(label5);
+            Controls.Add(labelErro);
             Controls.Add(labelProduto);
             Controls.Add(labelServico);
             Controls.Add(labelQuant);
@@ -228,10 +250,9 @@
             Controls.Add(pictureBox1);
             Name = "Vendas";
             Text = "Pedido";
-            Load += Vendas_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBuscarClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,14 +267,16 @@
         private Label labelQuant;
         private Label labelServico;
         private Label labelProduto;
-        private Label label5;
+        private Label labelErro;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private Button buttonConcluirPedido;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewBuscarClientes;
         private ComboBox comboBoxOpcaoPagamento;
         private TextBox textBoxValorFinal;
         private CheckBox checkBoxPagamento;
-        private Label label1;
+        private Label labelTitulo;
+        private Label labelFormaDePag;
+        private Label labelValorTotal;
     }
 }

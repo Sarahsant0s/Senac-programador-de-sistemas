@@ -17,10 +17,6 @@ namespace Projeto_Integrador
             InitializeComponent();
         }
 
-        private void Vendas_Load(object sender, EventArgs e)
-        {
-
-        }
         private void buttonConcluirPedido_Click(object sender, EventArgs e)
         {
             Fiscalização_dos_Pedidos novoForm = new Fiscalização_dos_Pedidos();

@@ -40,10 +40,10 @@
             labelTel = new Label();
             labelTitulo = new Label();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewClienteCadastrado = new DataGridView();
             pictureBox1 = new PictureBox();
             labelErro = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClienteCadastrado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             // 
             // maskedTextBoxTel
             // 
-            maskedTextBoxTel.Location = new Point(178, 245);
+            maskedTextBoxTel.Location = new Point(178, 235);
             maskedTextBoxTel.Mask = "(00)00000-0000";
             maskedTextBoxTel.Name = "maskedTextBoxTel";
             maskedTextBoxTel.Size = new Size(100, 23);
@@ -73,7 +73,7 @@
             // 
             // maskedTextBoxCPF
             // 
-            maskedTextBoxCPF.Location = new Point(12, 245);
+            maskedTextBoxCPF.Location = new Point(11, 235);
             maskedTextBoxCPF.Mask = "000.000.000-00";
             maskedTextBoxCPF.Name = "maskedTextBoxCPF";
             maskedTextBoxCPF.Size = new Size(100, 23);
@@ -107,7 +107,7 @@
             // labelCPF
             // 
             labelCPF.AutoSize = true;
-            labelCPF.Location = new Point(12, 220);
+            labelCPF.Location = new Point(11, 217);
             labelCPF.Name = "labelCPF";
             labelCPF.Size = new Size(39, 15);
             labelCPF.TabIndex = 8;
@@ -116,7 +116,7 @@
             // labelTel
             // 
             labelTel.AutoSize = true;
-            labelTel.Location = new Point(178, 220);
+            labelTel.Location = new Point(172, 217);
             labelTel.Name = "labelTel";
             labelTel.Size = new Size(65, 15);
             labelTel.TabIndex = 9;
@@ -142,13 +142,13 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // dataGridViewClienteCadastrado
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(331, 21);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(483, 282);
-            dataGridView1.TabIndex = 14;
+            dataGridViewClienteCadastrado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewClienteCadastrado.Location = new Point(331, 21);
+            dataGridViewClienteCadastrado.Name = "dataGridViewClienteCadastrado";
+            dataGridViewClienteCadastrado.Size = new Size(483, 282);
+            dataGridViewClienteCadastrado.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -163,7 +163,7 @@
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(53, 331);
+            labelErro.Location = new Point(21, 318);
             labelErro.Name = "labelErro";
             labelErro.Size = new Size(10, 15);
             labelErro.TabIndex = 16;
@@ -179,7 +179,7 @@
             Controls.Add(textBoxEmail);
             Controls.Add(labelTel);
             Controls.Add(maskedTextBoxTel);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewClienteCadastrado);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(labelTitulo);
@@ -191,7 +191,7 @@
             Controls.Add(buttonCadastrar);
             Name = "Form1";
             Text = "Cadastre-se";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClienteCadastrado).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -210,7 +210,7 @@
         private Label labelTel;
         private Label labelTitulo;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewClienteCadastrado;
         private PictureBox pictureBox1;
         private Label labelErro;
     }
