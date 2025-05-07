@@ -41,15 +41,17 @@
             labelTitulo = new Label();
             button1 = new Button();
             dataGridViewClienteCadastrado = new DataGridView();
-            pictureBox1 = new PictureBox();
             labelErro = new Label();
+            pictureBox1 = new PictureBox();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridViewClienteCadastrado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // buttonCadastrar
             // 
-            buttonCadastrar.Location = new Point(41, 287);
+            buttonCadastrar.Cursor = Cursors.AppStarting;
+            buttonCadastrar.Location = new Point(274, 234);
             buttonCadastrar.Name = "buttonCadastrar";
             buttonCadastrar.Size = new Size(99, 25);
             buttonCadastrar.TabIndex = 0;
@@ -58,47 +60,53 @@
             // 
             // textBoxNome
             // 
+            textBoxNome.Cursor = Cursors.IBeam;
             textBoxNome.Location = new Point(12, 94);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(266, 23);
+            textBoxNome.Size = new Size(241, 23);
             textBoxNome.TabIndex = 1;
             // 
             // maskedTextBoxTel
             // 
-            maskedTextBoxTel.Location = new Point(178, 235);
+            maskedTextBoxTel.Cursor = Cursors.IBeam;
+            maskedTextBoxTel.Location = new Point(12, 156);
             maskedTextBoxTel.Mask = "(00)00000-0000";
             maskedTextBoxTel.Name = "maskedTextBoxTel";
-            maskedTextBoxTel.Size = new Size(100, 23);
+            maskedTextBoxTel.Size = new Size(113, 23);
             maskedTextBoxTel.TabIndex = 3;
             // 
             // maskedTextBoxCPF
             // 
-            maskedTextBoxCPF.Location = new Point(11, 235);
+            maskedTextBoxCPF.Cursor = Cursors.IBeam;
+            maskedTextBoxCPF.Location = new Point(274, 156);
             maskedTextBoxCPF.Mask = "000.000.000-00";
             maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            maskedTextBoxCPF.Size = new Size(100, 23);
+            maskedTextBoxCPF.Size = new Size(112, 23);
             maskedTextBoxCPF.TabIndex = 4;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(12, 161);
+            textBoxEmail.Cursor = Cursors.IBeam;
+            textBoxEmail.Location = new Point(274, 94);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(266, 23);
+            textBoxEmail.Size = new Size(241, 23);
             textBoxEmail.TabIndex = 5;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
-            labelNome.Location = new Point(12, 76);
+            labelNome.BackColor = Color.Transparent;
+            labelNome.Location = new Point(11, 78);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(51, 15);
+            labelNome.Size = new Size(46, 15);
             labelNome.TabIndex = 6;
-            labelNome.Text = "* Nome:";
+            labelNome.Text = " Nome:";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(11, 143);
+            labelEmail.BackColor = Color.Transparent;
+            labelEmail.Location = new Point(274, 78);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(52, 15);
             labelEmail.TabIndex = 7;
@@ -107,7 +115,8 @@
             // labelCPF
             // 
             labelCPF.AutoSize = true;
-            labelCPF.Location = new Point(11, 217);
+            labelCPF.BackColor = Color.Transparent;
+            labelCPF.Location = new Point(274, 131);
             labelCPF.Name = "labelCPF";
             labelCPF.Size = new Size(39, 15);
             labelCPF.TabIndex = 8;
@@ -116,7 +125,8 @@
             // labelTel
             // 
             labelTel.AutoSize = true;
-            labelTel.Location = new Point(172, 217);
+            labelTel.BackColor = Color.Transparent;
+            labelTel.Location = new Point(11, 131);
             labelTel.Name = "labelTel";
             labelTel.Size = new Size(65, 15);
             labelTel.TabIndex = 9;
@@ -125,16 +135,19 @@
             // labelTitulo
             // 
             labelTitulo.AutoSize = true;
-            labelTitulo.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(21, 9);
+            labelTitulo.BackColor = Color.Transparent;
+            labelTitulo.BorderStyle = BorderStyle.FixedSingle;
+            labelTitulo.Font = new Font("Elephant", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitulo.Location = new Point(136, 28);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(216, 27);
+            labelTitulo.Size = new Size(265, 33);
             labelTitulo.TabIndex = 10;
             labelTitulo.Text = "Cadastro de Clientes";
             // 
             // button1
             // 
-            button1.Location = new Point(157, 287);
+            button1.Cursor = Cursors.AppStarting;
+            button1.Location = new Point(154, 234);
             button1.Name = "button1";
             button1.Size = new Size(99, 25);
             button1.TabIndex = 12;
@@ -145,47 +158,55 @@
             // dataGridViewClienteCadastrado
             // 
             dataGridViewClienteCadastrado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClienteCadastrado.Location = new Point(331, 21);
+            dataGridViewClienteCadastrado.Location = new Point(11, 285);
             dataGridViewClienteCadastrado.Name = "dataGridViewClienteCadastrado";
-            dataGridViewClienteCadastrado.Size = new Size(483, 282);
+            dataGridViewClienteCadastrado.Size = new Size(504, 240);
             dataGridViewClienteCadastrado.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-55, 349);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(455, 240);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
             // 
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(21, 318);
+            labelErro.Location = new Point(100, 193);
             labelErro.Name = "labelErro";
             labelErro.Size = new Size(10, 15);
             labelErro.TabIndex = 16;
             labelErro.Text = ".";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(521, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(325, 323);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 20;
+            pictureBox1.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(601, 502);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(245, 23);
+            dateTimePicker1.TabIndex = 21;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(862, 561);
-            Controls.Add(labelErro);
+            ClientSize = new Size(848, 529);
+            Controls.Add(dateTimePicker1);
             Controls.Add(textBoxEmail);
-            Controls.Add(labelTel);
-            Controls.Add(maskedTextBoxTel);
             Controls.Add(dataGridViewClienteCadastrado);
             Controls.Add(pictureBox1);
+            Controls.Add(labelNome);
+            Controls.Add(labelErro);
+            Controls.Add(labelTel);
+            Controls.Add(maskedTextBoxTel);
             Controls.Add(button1);
             Controls.Add(labelTitulo);
             Controls.Add(labelCPF);
             Controls.Add(labelEmail);
-            Controls.Add(labelNome);
             Controls.Add(maskedTextBoxCPF);
             Controls.Add(textBoxNome);
             Controls.Add(buttonCadastrar);
@@ -211,7 +232,8 @@
         private Label labelTitulo;
         private Button button1;
         private DataGridView dataGridViewClienteCadastrado;
-        private PictureBox pictureBox1;
         private Label labelErro;
+        private PictureBox pictureBox1;
+        private DateTimePicker dateTimePicker1;
     }
 }

@@ -38,6 +38,10 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             labelErro = new Label();
+            buttonEfetuarPag = new Button();
+            textBoxBuscarCliente = new TextBox();
+            labelNome = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -45,7 +49,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(343, 27);
+            dataGridView1.Location = new Point(336, 27);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(494, 324);
             dataGridView1.TabIndex = 0;
@@ -53,16 +57,16 @@
             // labelTitulo
             // 
             labelTitulo.AutoSize = true;
-            labelTitulo.Font = new Font("Bell MT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(51, 27);
+            labelTitulo.Font = new Font("Elephant", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitulo.Location = new Point(12, 27);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(230, 27);
+            labelTitulo.Size = new Size(318, 35);
             labelTitulo.TabIndex = 1;
             labelTitulo.Text = "Pedidos em Pendência";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(176, 88);
+            textBox1.Location = new Point(37, 148);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 2;
@@ -70,7 +74,7 @@
             // labelIdPedido
             // 
             labelIdPedido.AutoSize = true;
-            labelIdPedido.Location = new Point(176, 70);
+            labelIdPedido.Location = new Point(37, 130);
             labelIdPedido.Name = "labelIdPedido";
             labelIdPedido.Size = new Size(77, 15);
             labelIdPedido.TabIndex = 3;
@@ -79,7 +83,7 @@
             // labelCPFCliente
             // 
             labelCPFCliente.AutoSize = true;
-            labelCPFCliente.Location = new Point(24, 70);
+            labelCPFCliente.Location = new Point(198, 130);
             labelCPFCliente.Name = "labelCPFCliente";
             labelCPFCliente.Size = new Size(88, 15);
             labelCPFCliente.TabIndex = 4;
@@ -87,7 +91,7 @@
             // 
             // maskedTextBox1
             // 
-            maskedTextBox1.Location = new Point(24, 88);
+            maskedTextBox1.Location = new Point(198, 148);
             maskedTextBox1.Mask = "000.000.000-00";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(100, 23);
@@ -95,7 +99,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(97, 151);
+            button1.Location = new Point(106, 190);
             button1.Name = "button1";
             button1.Size = new Size(121, 23);
             button1.TabIndex = 6;
@@ -105,7 +109,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-21, 310);
+            pictureBox1.Location = new Point(-7, 312);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(358, 236);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -115,18 +119,55 @@
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(24, 232);
+            labelErro.Location = new Point(37, 210);
             labelErro.Name = "labelErro";
             labelErro.Size = new Size(10, 15);
             labelErro.TabIndex = 8;
             labelErro.Text = ".";
+            // 
+            // buttonEfetuarPag
+            // 
+            buttonEfetuarPag.Location = new Point(78, 261);
+            buttonEfetuarPag.Name = "buttonEfetuarPag";
+            buttonEfetuarPag.Size = new Size(175, 23);
+            buttonEfetuarPag.TabIndex = 9;
+            buttonEfetuarPag.Text = "Efetuar Pagamento agora";
+            buttonEfetuarPag.UseVisualStyleBackColor = true;
+            // 
+            // textBoxBuscarCliente
+            // 
+            textBoxBuscarCliente.Location = new Point(37, 90);
+            textBoxBuscarCliente.Name = "textBoxBuscarCliente";
+            textBoxBuscarCliente.Size = new Size(261, 23);
+            textBoxBuscarCliente.TabIndex = 10;
+            // 
+            // labelNome
+            // 
+            labelNome.AutoSize = true;
+            labelNome.Location = new Point(37, 72);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(173, 15);
+            labelNome.TabIndex = 11;
+            labelNome.Text = "Nome e Sobrenome do Cliente:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(602, 496);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(247, 23);
+            dateTimePicker1.TabIndex = 12;
             // 
             // Fiscalização_dos_Pedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(892, 520);
+            ClientSize = new Size(850, 520);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(labelNome);
+            Controls.Add(textBoxBuscarCliente);
+            Controls.Add(buttonEfetuarPag);
+            Controls.Add(dataGridView1);
             Controls.Add(labelErro);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -135,7 +176,6 @@
             Controls.Add(labelIdPedido);
             Controls.Add(textBox1);
             Controls.Add(labelTitulo);
-            Controls.Add(dataGridView1);
             Name = "Fiscalização_dos_Pedidos";
             Text = "Fiscalização_dos_Pedidos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -155,5 +195,9 @@
         private Button button1;
         private PictureBox pictureBox1;
         private Label labelErro;
+        private Button buttonEfetuarPag;
+        private TextBox textBoxBuscarCliente;
+        private Label labelNome;
+        private DateTimePicker dateTimePicker1;
     }
 }
