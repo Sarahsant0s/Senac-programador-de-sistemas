@@ -44,176 +44,242 @@
             labelErro = new Label();
             pictureBox1 = new PictureBox();
             dateTimePicker1 = new DateTimePicker();
+            groupBoxInformacoesPessoais = new GroupBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewClienteCadastrado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBoxInformacoesPessoais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonCadastrar
             // 
+            buttonCadastrar.BackColor = SystemColors.ControlDark;
+            buttonCadastrar.BackgroundImageLayout = ImageLayout.None;
             buttonCadastrar.Cursor = Cursors.AppStarting;
-            buttonCadastrar.Location = new Point(274, 234);
+            buttonCadastrar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonCadastrar.Location = new Point(233, 212);
             buttonCadastrar.Name = "buttonCadastrar";
-            buttonCadastrar.Size = new Size(99, 25);
+            buttonCadastrar.Size = new Size(138, 30);
             buttonCadastrar.TabIndex = 0;
             buttonCadastrar.Text = "Cadastrar";
-            buttonCadastrar.UseVisualStyleBackColor = true;
+            buttonCadastrar.UseVisualStyleBackColor = false;
             // 
             // textBoxNome
             // 
             textBoxNome.Cursor = Cursors.IBeam;
-            textBoxNome.Location = new Point(12, 94);
+            textBoxNome.Location = new Point(28, 75);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(241, 23);
+            textBoxNome.Size = new Size(210, 25);
             textBoxNome.TabIndex = 1;
             // 
             // maskedTextBoxTel
             // 
             maskedTextBoxTel.Cursor = Cursors.IBeam;
-            maskedTextBoxTel.Location = new Point(12, 156);
+            maskedTextBoxTel.Location = new Point(261, 75);
             maskedTextBoxTel.Mask = "(00)00000-0000";
             maskedTextBoxTel.Name = "maskedTextBoxTel";
-            maskedTextBoxTel.Size = new Size(113, 23);
+            maskedTextBoxTel.Size = new Size(124, 25);
             maskedTextBoxTel.TabIndex = 3;
             // 
             // maskedTextBoxCPF
             // 
             maskedTextBoxCPF.Cursor = Cursors.IBeam;
-            maskedTextBoxCPF.Location = new Point(274, 156);
+            maskedTextBoxCPF.Location = new Point(261, 143);
             maskedTextBoxCPF.Mask = "000.000.000-00";
             maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            maskedTextBoxCPF.Size = new Size(112, 23);
+            maskedTextBoxCPF.Size = new Size(124, 25);
             maskedTextBoxCPF.TabIndex = 4;
             // 
             // textBoxEmail
             // 
             textBoxEmail.Cursor = Cursors.IBeam;
-            textBoxEmail.Location = new Point(274, 94);
+            textBoxEmail.Location = new Point(27, 143);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(241, 23);
+            textBoxEmail.Size = new Size(211, 25);
             textBoxEmail.TabIndex = 5;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
             labelNome.BackColor = Color.Transparent;
-            labelNome.Location = new Point(11, 78);
+            labelNome.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNome.Location = new Point(58, 55);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(46, 15);
+            labelNome.Size = new Size(44, 17);
             labelNome.TabIndex = 6;
-            labelNome.Text = " Nome:";
+            labelNome.Text = "Nome";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.BackColor = Color.Transparent;
-            labelEmail.Location = new Point(274, 78);
+            labelEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEmail.Location = new Point(27, 123);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(52, 15);
+            labelEmail.Size = new Size(49, 17);
             labelEmail.TabIndex = 7;
-            labelEmail.Text = "* E-mail:";
+            labelEmail.Text = "E-mail*";
             // 
             // labelCPF
             // 
             labelCPF.AutoSize = true;
             labelCPF.BackColor = Color.Transparent;
-            labelCPF.Location = new Point(274, 131);
+            labelCPF.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelCPF.Location = new Point(261, 123);
             labelCPF.Name = "labelCPF";
-            labelCPF.Size = new Size(39, 15);
+            labelCPF.Size = new Size(34, 17);
             labelCPF.TabIndex = 8;
-            labelCPF.Text = "* CPF:";
+            labelCPF.Text = "CPF*";
             // 
             // labelTel
             // 
             labelTel.AutoSize = true;
             labelTel.BackColor = Color.Transparent;
-            labelTel.Location = new Point(11, 131);
+            labelTel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTel.Location = new Point(287, 55);
             labelTel.Name = "labelTel";
-            labelTel.Size = new Size(65, 15);
+            labelTel.Size = new Size(57, 17);
             labelTel.TabIndex = 9;
-            labelTel.Text = " * Telefone:";
+            labelTel.Text = "Telefone";
             // 
             // labelTitulo
             // 
             labelTitulo.AutoSize = true;
             labelTitulo.BackColor = Color.Transparent;
-            labelTitulo.BorderStyle = BorderStyle.FixedSingle;
             labelTitulo.Font = new Font("Elephant", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(136, 28);
+            labelTitulo.Location = new Point(305, 9);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(265, 33);
+            labelTitulo.Size = new Size(263, 31);
             labelTitulo.TabIndex = 10;
             labelTitulo.Text = "Cadastro de Clientes";
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ControlDark;
             button1.Cursor = Cursors.AppStarting;
-            button1.Location = new Point(154, 234);
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(80, 212);
             button1.Name = "button1";
-            button1.Size = new Size(99, 25);
+            button1.Size = new Size(138, 30);
             button1.TabIndex = 12;
             button1.Text = "Próximo";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // dataGridViewClienteCadastrado
             // 
             dataGridViewClienteCadastrado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClienteCadastrado.Location = new Point(11, 285);
+            dataGridViewClienteCadastrado.Location = new Point(9, 22);
             dataGridViewClienteCadastrado.Name = "dataGridViewClienteCadastrado";
-            dataGridViewClienteCadastrado.Size = new Size(504, 240);
+            dataGridViewClienteCadastrado.Size = new Size(464, 257);
             dataGridViewClienteCadastrado.TabIndex = 14;
             // 
             // labelErro
             // 
             labelErro.AutoSize = true;
-            labelErro.Location = new Point(100, 193);
+            labelErro.Location = new Point(80, 192);
             labelErro.Name = "labelErro";
-            labelErro.Size = new Size(10, 15);
+            labelErro.Size = new Size(11, 17);
             labelErro.TabIndex = 16;
             labelErro.Text = ".";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(521, 12);
+            pictureBox1.Location = new Point(252, 306);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(325, 323);
+            pictureBox1.Size = new Size(417, 271);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(601, 502);
+            dateTimePicker1.Location = new Point(689, 506);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(245, 23);
             dateTimePicker1.TabIndex = 21;
+            // 
+            // groupBoxInformacoesPessoais
+            // 
+            groupBoxInformacoesPessoais.BackColor = Color.Transparent;
+            groupBoxInformacoesPessoais.Controls.Add(pictureBox2);
+            groupBoxInformacoesPessoais.Controls.Add(labelNome);
+            groupBoxInformacoesPessoais.Controls.Add(pictureBox3);
+            groupBoxInformacoesPessoais.Controls.Add(textBoxNome);
+            groupBoxInformacoesPessoais.Controls.Add(maskedTextBoxCPF);
+            groupBoxInformacoesPessoais.Controls.Add(textBoxEmail);
+            groupBoxInformacoesPessoais.Controls.Add(labelEmail);
+            groupBoxInformacoesPessoais.Controls.Add(buttonCadastrar);
+            groupBoxInformacoesPessoais.Controls.Add(labelErro);
+            groupBoxInformacoesPessoais.Controls.Add(labelCPF);
+            groupBoxInformacoesPessoais.Controls.Add(button1);
+            groupBoxInformacoesPessoais.Controls.Add(maskedTextBoxTel);
+            groupBoxInformacoesPessoais.Controls.Add(labelTel);
+            groupBoxInformacoesPessoais.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxInformacoesPessoais.ForeColor = SystemColors.ActiveCaptionText;
+            groupBoxInformacoesPessoais.Location = new Point(3, 43);
+            groupBoxInformacoesPessoais.Name = "groupBoxInformacoesPessoais";
+            groupBoxInformacoesPessoais.Size = new Size(446, 293);
+            groupBoxInformacoesPessoais.TabIndex = 22;
+            groupBoxInformacoesPessoais.TabStop = false;
+            groupBoxInformacoesPessoais.Text = "Informações Pessoais";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(27, 47);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 25);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(261, 47);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(29, 25);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 23;
+            pictureBox3.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(dataGridViewClienteCadastrado);
+            groupBox1.Location = new Point(455, 43);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(479, 293);
+            groupBox1.TabIndex = 23;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Observações";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(848, 529);
+            ClientSize = new Size(937, 531);
+            Controls.Add(groupBox1);
+            Controls.Add(groupBoxInformacoesPessoais);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBoxEmail);
-            Controls.Add(dataGridViewClienteCadastrado);
             Controls.Add(pictureBox1);
-            Controls.Add(labelNome);
-            Controls.Add(labelErro);
-            Controls.Add(labelTel);
-            Controls.Add(maskedTextBoxTel);
-            Controls.Add(button1);
             Controls.Add(labelTitulo);
-            Controls.Add(labelCPF);
-            Controls.Add(labelEmail);
-            Controls.Add(maskedTextBoxCPF);
-            Controls.Add(textBoxNome);
-            Controls.Add(buttonCadastrar);
             Name = "Form1";
             Text = "Cadastre-se";
             ((System.ComponentModel.ISupportInitialize)dataGridViewClienteCadastrado).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBoxInformacoesPessoais.ResumeLayout(false);
+            groupBoxInformacoesPessoais.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -235,5 +301,9 @@
         private Label labelErro;
         private PictureBox pictureBox1;
         private DateTimePicker dateTimePicker1;
+        private GroupBox groupBoxInformacoesPessoais;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private GroupBox groupBox1;
     }
 }

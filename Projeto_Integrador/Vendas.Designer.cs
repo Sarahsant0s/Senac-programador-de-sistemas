@@ -49,9 +49,13 @@
             labelFormaDePag = new Label();
             labelValorTotal = new Label();
             dateTimePicker1 = new DateTimePicker();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuscarClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -66,7 +70,7 @@
             // 
             // buttonBuscar
             // 
-            buttonBuscar.Location = new Point(382, 84);
+            buttonBuscar.Location = new Point(334, 84);
             buttonBuscar.Name = "buttonBuscar";
             buttonBuscar.Size = new Size(75, 23);
             buttonBuscar.TabIndex = 1;
@@ -77,7 +81,7 @@
             // 
             textBoxBuscarNomeCliente.Location = new Point(22, 85);
             textBoxBuscarNomeCliente.Name = "textBoxBuscarNomeCliente";
-            textBoxBuscarNomeCliente.Size = new Size(355, 23);
+            textBoxBuscarNomeCliente.Size = new Size(309, 23);
             textBoxBuscarNomeCliente.TabIndex = 2;
             // 
             // numericUpDownQuantidade
@@ -101,27 +105,27 @@
             labelQuant.AutoSize = true;
             labelQuant.Location = new Point(337, 135);
             labelQuant.Name = "labelQuant";
-            labelQuant.Size = new Size(72, 15);
+            labelQuant.Size = new Size(69, 15);
             labelQuant.TabIndex = 7;
-            labelQuant.Text = "Quantidade:";
+            labelQuant.Text = "Quantidade";
             // 
             // labelServico
             // 
             labelServico.AutoSize = true;
             labelServico.Location = new Point(22, 135);
             labelServico.Name = "labelServico";
-            labelServico.Size = new Size(48, 15);
+            labelServico.Size = new Size(45, 15);
             labelServico.TabIndex = 8;
-            labelServico.Text = "Serviço:";
+            labelServico.Text = "Serviço";
             // 
             // labelProduto
             // 
             labelProduto.AutoSize = true;
             labelProduto.Location = new Point(210, 135);
             labelProduto.Name = "labelProduto";
-            labelProduto.Size = new Size(53, 15);
+            labelProduto.Size = new Size(50, 15);
             labelProduto.TabIndex = 9;
-            labelProduto.Text = "Produto:";
+            labelProduto.Text = "Produto";
             // 
             // labelErro
             // 
@@ -172,7 +176,7 @@
             // 
             comboBoxOpcaoPagamento.FormattingEnabled = true;
             comboBoxOpcaoPagamento.Items.AddRange(new object[] { "Boletos", "Cartão de Crédito & Débito", "Carteira Digital", "Dinheiro", "Links de Pagamento", "Pix", "Transferências Bancárias" });
-            comboBoxOpcaoPagamento.Location = new Point(22, 230);
+            comboBoxOpcaoPagamento.Location = new Point(22, 245);
             comboBoxOpcaoPagamento.Name = "comboBoxOpcaoPagamento";
             comboBoxOpcaoPagamento.Size = new Size(124, 23);
             comboBoxOpcaoPagamento.TabIndex = 15;
@@ -189,7 +193,7 @@
             // checkBoxPagamento
             // 
             checkBoxPagamento.AutoSize = true;
-            checkBoxPagamento.Location = new Point(22, 263);
+            checkBoxPagamento.Location = new Point(21, 300);
             checkBoxPagamento.Name = "checkBoxPagamento";
             checkBoxPagamento.Size = new Size(158, 19);
             checkBoxPagamento.TabIndex = 17;
@@ -231,12 +235,34 @@
             dateTimePicker1.Size = new Size(248, 23);
             dateTimePicker1.TabIndex = 21;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(38, 397);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(17, 19);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 22;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(310, 85);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(21, 22);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 23;
+            pictureBox3.TabStop = false;
+            // 
             // Vendas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(922, 508);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(dateTimePicker1);
             Controls.Add(labelValorTotal);
             Controls.Add(labelFormaDePag);
@@ -262,6 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBuscarClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -288,5 +316,7 @@
         private Label labelFormaDePag;
         private Label labelValorTotal;
         private DateTimePicker dateTimePicker1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
