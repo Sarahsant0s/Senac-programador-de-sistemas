@@ -3,7 +3,6 @@ D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\bin\
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\bin\Debug\net8.0-windows\Projeto_Integrador.runtimeconfig.json
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\bin\Debug\net8.0-windows\Projeto_Integrador.dll
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\bin\Debug\net8.0-windows\Projeto_Integrador.pdb
-D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Form1.resources
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Properties.Resources.resources
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.csproj.GenerateResource.cache
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,4 +16,4 @@ D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.genruntimeconfig.cache
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\ref\Projeto_Integrador.dll
 D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Vendas.resources
-D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.Fiscalização_dos_Pedidos.resources
+D:\Programador de sistemas\Senac-programador-de-sistemas\Projeto_Integrador\obj\Debug\net8.0-windows\Projeto_Integrador.HairSharp.resources

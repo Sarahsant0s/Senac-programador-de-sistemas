@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador
 {
-    public partial class Fiscalização_dos_Pedidos : Form
+    public partial class HairSharp : Form
     {
-        public Fiscalização_dos_Pedidos()
+        public HairSharp()
         {
             InitializeComponent();
         }
